@@ -15,15 +15,23 @@ export default function App() {
     const tmp = await apiCaller.call('/activities', 'GET');
     setData(tmp); 
   }
+  // View activity
   const onViewButtonPress = async (id:string)=>{
     const tmp = await apiCaller.call('/activities/'+id, 'GET');
     console.log('view data: \n Id:', id, '\nObject', tmp)
     setData(tmp); 
   }
+  // Create activity
   const onCreateButtonPress = async (id:string)=>{
     const tmp = await apiCaller.call('/activities/'+id, 'GET');
     setData(tmp); 
   }
+  // Update activity 
+  const onUpdateButtonPress = async (id:string)=>{
+    const tmp = await apiCaller.call('/activities/'+id, 'GET');
+    setData(tmp); 
+  }
+  // Delete activity
   const onDeleteButtonPress = async (id:string) => {
 
     const tmp = await apiCaller.call('/activities/'+id,'DELETE');
@@ -73,11 +81,12 @@ export default function App() {
             />
           </View>
         </View>
-        <View style={{flex:1, flexDirection:'column'}}>
-          <Button mode={'contained'} style={{flexDirection:'column', backgroundColor:'#0874ED', marginVertical:10 }} onPress={onListButtonPress}>List activities</Button>
-          <Button mode={'contained'} style={{flexDirection:'column', backgroundColor:'#12B3E2', marginVertical:10 }} onPress={()=>onViewButtonPress(text)}>View activity</Button>
-          <Button mode={'contained'} style={{flexDirection:'column', backgroundColor:'#FFA600', marginVertical:10 }} onPress={()=>onCreateButtonPress(text)}>Create activity</Button>
-          <Button mode={'contained'} style={{flexDirection:'column', backgroundColor:'#E21212', marginVertical:10 }} onPress={()=>onDeleteButtonPress(text)}>Delete activity</Button>
+        <View style={{flex:2, flexDirection:'row', flexWrap:'wrap', width:'60%', alignSelf:'center', alignItems:'center', alignContent:'center', justifyContent:'center'}}>
+          <Button mode={'contained'} style={{height: 50, alignItems:'center', marginHorizontal: 10, flexDirection:'row', backgroundColor:'#0874ED', marginTop:10 }} onPress={onListButtonPress}>List activities</Button>
+          <Button mode={'contained'} style={{height: 50, alignItems:'center', marginHorizontal: 10, flexDirection:'row', backgroundColor:'#12B3E2', marginTop:10 }} onPress={()=>onViewButtonPress(text)}>View activity</Button>
+          <Button mode={'contained'} style={{height: 50, alignItems:'center', marginHorizontal: 10, flexDirection:'row', backgroundColor:'#FFA600', marginTop:10 }} onPress={()=>onUpdateButtonPress(text)}>Update activity</Button>
+          <Button mode={'contained'} style={{height: 50, alignItems:'center', marginHorizontal: 10, flexDirection:'row', backgroundColor:'#46A93C', marginTop:10 }} onPress={()=>onCreateButtonPress(text)}>Create activity</Button>
+          <Button mode={'contained'} style={{height: 50, alignItems:'center', marginHorizontal: 10, flexDirection:'row', backgroundColor:'#E21212', marginTop:10 }} onPress={()=>onDeleteButtonPress(text)}>Delete activity</Button>
         </View>
       </View>
       <StatusBar style="auto" />

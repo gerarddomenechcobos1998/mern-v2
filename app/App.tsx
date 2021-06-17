@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import ApiCaller from './api/ApiCaller';
+import ApiCaller from './src/api/ApiCaller';
 import { Button, TextInput  } from 'react-native-paper';
 
 export default function App() {
   // variables
   const [text, setText] = useState<string>("");
+  const [properites, setProperties] = useState<string>("");
+  const [name, setName] = useState<string>("");
   const [data,setData] = useState<any>();
   // llamada a la api
   var apiCaller = new ApiCaller();
@@ -79,6 +81,25 @@ export default function App() {
               style={{backgroundColor:'white', flex:1}}
               placeholder='put your activity "_id" here'
             />
+            <TextInput
+              label="name"
+              value={name}
+              onChangeText={name => setName(name)}
+              mode='outlined'
+              style={{backgroundColor:'white', flex:1}}
+              placeholder='put your activity name here'
+            />
+            <TextInput
+              label="properties"
+              value={properites}
+              onChangeText={properites => setProperties(properites)}
+              mode='outlined'
+              style={{backgroundColor:'white', flex:1}}
+              placeholder='put your activity properties here'
+            />
+            <View style={{flex:1, flexDirection:'row', width:'60%', alignSelf:'center', alignItems:'center', alignContent:'center', alignContent:'center'}}>
+              <Button mode={'outlined'} style={{height: 50, alignItems:'center', flex:1, marginHorizontal: 10, flexDirection:'column', borderWidth:2, marginTop:10 }} onPress={onListButtonPress}>Submit</Button>
+            </View>
           </View>
         </View>
         <View style={{flex:2, flexDirection:'row', flexWrap:'wrap', width:'60%', alignSelf:'center', alignItems:'center', alignContent:'center', justifyContent:'center'}}>

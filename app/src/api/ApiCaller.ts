@@ -1,4 +1,4 @@
-import Settings from '../core/Settings';
+import Settings from '../../core/Settings';
 
 class ApiCaller {
     apiUrl: string;

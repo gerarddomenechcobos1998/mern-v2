@@ -1,22 +1,46 @@
-import React, { memo, useState } from 'react';
-import { View, Text,Alert,StyleSheet} from 'react-native';
-import { Button } from 'react-native-paper';
+import React, { memo, useState, useEffect } from 'react';
+import { View, Text,Alert,StyleSheet, ScrollView} from 'react-native';
+import { Card, Title, Paragraph  } from 'react-native-paper';
 import { Navigation } from '../types';
 import { theme } from '../core/theme';
+import ApiCaller from '../core/ApiCaller';
 
 type Props = {
   navigation: Navigation;
 };
 
 const HomeScreen = ({ navigation }: Props) => {
+  const [activites,setActivities] = useState<any>();
+  var apiCaller = new ApiCaller();
+
+  const readArticles = async ()=>{
+    const dataRes = await apiCaller.call('/activities', 'GET');
+    setActivities(dataRes); 
+  }
+  useEffect(()=>{
+    readArticles();
+  },[])
 
 return (
-        <View style={{ flex:1, flexDirection:'column', justifyContent:'center', borderWidth:1, alignContent:'center'}}>
-          <View style={{ width:'80%', alignSelf:'center'}}>
-            <Button mode='contained' style={{ marginVertical:20, backgroundColor:'red', flexDirection:'column'}} onPress={()=>navigation.navigate('create')}>Create</Button>
-            <Button mode='contained' style={{ marginVertical:20, backgroundColor:'green', flexDirection:'column' }} onPress={()=>navigation.navigate('list')}>List</Button>
-            <Button mode='contained' style={{ marginVertical:20, backgroundColor:'orange', flexDirection:'column'}} onPress={()=>navigation.navigate('update')}>Update</Button>
-            <Button mode='contained' style={{ marginVertical:20, backgroundColor:'blue', flexDirection:'column'}} onPress={()=>navigation.navigate('view')}>View</Button>
+        <View style={{ flex:1, flexDirection:'column', justifyContent:'center', alignContent:'center'}}>
+          <View style={{ width:'60%', flex:1, flexDirection:'column', justifyContent:'center', alignSelf:'center', borderWidth:1}}>
+          <ScrollView
+            style={{ height:0}}
+            contentContainerStyle={{flexDirection:'row', flexWrap:'wrap', justifyContent:'center'}}
+          >
+            {
+              activites?activites.map((activity:any, index:number) =>{
+                return(
+                  <Card key={index} style={{width:300, margin:20}} onPress={()=>navigation.navigate('view', {id: activity?._id})}>
+                    <Card.Content>
+                      <Title>{activity?.name}</Title>
+                      <Paragraph>{activity?.properties}</Paragraph>
+                    </Card.Content>
+                  </Card>
+                );
+              }):null
+            }
+          </ScrollView>
           </View>
         </View>
     );

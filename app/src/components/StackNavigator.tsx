@@ -1,35 +1,37 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen, ListScreen, ViewScreen, UpdateScreen, CreateScreen} from '../pages';
-import AppHeader from './AppHeader';
+import Header from './Header';
+import { Navigation } from '../types';
 
 const StackNavigator = () => {
-
+    // state variables
     const [headerBorder, setHeaderBorder] = React.useState(0);
     const [headerStyle, setHeaderStyle] = React.useState('default');
+    // Create stack navigator
     const Stack = createStackNavigator();                       
-
-    const getInitialRoute = (ready: boolean, loggedin: boolean) => {
+    // returns the name of the screen that is first route
+    const getInitialRoute = () => {
         return "home";
     }
  
 
-    const getMenuBar = ( navigation ) => {
-        const title = "Titulo de la app";   
-        return (
-            <AppHeader navigation={navigation} title={title}></AppHeader>
-        );
-    }
+    // const getHeader = ( navigation: Navigation, pevious:any ) => {
+    //     const title = "Titulo de la app";   
+    //     return (
+    //         <Header navigation={navigation} title={title} previous={previous}></Header>
+    //     );
+    // }
 
     return (
         <Stack.Navigator
             initialRouteName={getInitialRoute()}
             headerMode="screen"
-            screenOptions={{
-                header: ({ navigation }) => {
-                    return getMenuBar(navigation);
-                }
-            }}
+            // screenOptions={{
+            //     header: ({ navigation, previous }) => {
+            //         return getHeader(navigation, previous);
+            //     }
+            // }}
         >
             <Stack.Screen name="home" component={HomeScreen} />
             <Stack.Screen name="list" component={ListScreen} />

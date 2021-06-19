@@ -1,8 +1,8 @@
 import React, { memo, useEffect, useState } from 'react';
-import { View, Text,Alert,StyleSheet} from 'react-native';
+import { View, Text } from 'react-native';
 import ApiCaller from '../core/ApiCaller';
 import { Navigation } from '../types';
-import { theme } from '../core/theme';
+import { Title, Paragraph } from 'react-native-paper';
 
 type Props = {
   navigation: Navigation;
@@ -13,35 +13,23 @@ const ViewScreen = ({ navigation, route }: Props) => {
   const [article, setArticle] = useState();
   var apiCaller = new ApiCaller();
 
-  const readArticle = async ()=>{
+  const readActivity = async ()=>{
     const dataRes = await apiCaller.call('/activities/'+ route.params?.id, 'GET');
     setArticle(dataRes); 
   }
 
   useEffect (()=>{
-    readArticle();
+    readActivity();
   },[]);
   return (
           <View style={{ flex:1}}>
-            <Text>{article?._id}</Text>
-            <Text>{article?.name}</Text>
-            <Text>{article?.properties}</Text>
+            <View style={{alignSelf:'center', width: '40%', marginTop: 40}}>
+              <Title style={{textAlign:'center', fontSize:24, fontWeight:'700', marginBottom:20}}>Info de la actividad</Title>
+              <Paragraph style={{ fontSize:20, fontWeight:'400', marginBottom:20}}><Paragraph style={{ fontSize:20, fontWeight:'700'}}>ID: </Paragraph>{article?._id}</Paragraph>
+              <Paragraph style={{ fontSize:20, fontWeight:'400', marginBottom:20}}><Paragraph style={{ fontSize:20, fontWeight:'700'}}>Nombre: </Paragraph>{article?.name}</Paragraph>
+              <Paragraph style={{ fontSize:20, fontWeight:'400', marginBottom:20}}><Paragraph style={{ fontSize:20, fontWeight:'700'}}>Propiedades: </Paragraph>{article?.properties}</Paragraph>
+            </View>
           </View>
       );
   };
-
-
-  const styles = StyleSheet.create({
-    entry: {
-      backgroundColor: theme.colors.background,
-
-    },
-    label: {
-      color: theme.colors.text,
-    },
-    link: {
-      fontWeight: 'bold',
-      color: theme.colors.primary,
-    },
-  });
 export default memo (ViewScreen);

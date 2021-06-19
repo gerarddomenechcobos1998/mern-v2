@@ -20,10 +20,12 @@ const Header = ({ title, previous, navigation, headerBorder}: Props) => {
    
     return (
     <Appbar.Header style={{backgroundColor:theme.colors.navBar, height: 'auto', borderBottomColor: '#e3e3e3', elevation:0, borderBottomWidth: headerBorder }}>
-        {previous ? (
-            <Appbar.BackAction
-                 onPress={navigation.goBack} />
-             ) : null}
+        {
+            previous 
+            ?<Appbar.BackAction onPress={navigation.goBack}/>
+            : null
+        }
+        
         <Appbar.Content
                 title={title}
                 titleStyle={{

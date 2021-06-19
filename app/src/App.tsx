@@ -48,7 +48,6 @@ const linking = {
 					create: 'create',
 					update: 'update',
 					view:'view',
-					list:'list',
                     home:'home'
 			}
 		}

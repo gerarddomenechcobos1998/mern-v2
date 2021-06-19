@@ -34,7 +34,6 @@ const StackNavigator = () => {
             }}
         >
             <Stack.Screen name="home" component={HomeScreen} />
-            <Stack.Screen name="list" component={ListScreen} />
             <Stack.Screen name="update" component={UpdateScreen} />
             <Stack.Screen name="view" component={ViewScreen} />
             <Stack.Screen name="create" component={CreateScreen} />

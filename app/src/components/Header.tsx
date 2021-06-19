@@ -11,7 +11,7 @@ type Props = {
     headerBorder?: any;
 };
  
-const Header = ({ title, navigation, headerBorder}: Props) => {
+const Header = ({ title, previous, navigation, headerBorder}: Props) => {
     const menuButton = () => {
         return <Appbar.Action icon="menu" onPress={() => {
             ((navigation as Navigation) as DrawerNavigationProp<{}>).openDrawer();

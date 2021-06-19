@@ -16,22 +16,22 @@ const StackNavigator = () => {
     }
  
 
-    // const getHeader = ( navigation: Navigation, pevious:any ) => {
-    //     const title = "Titulo de la app";   
-    //     return (
-    //         <Header navigation={navigation} title={title} previous={previous}></Header>
-    //     );
-    // }
+    const getHeader = ( navigation: any, previous:any ) => {
+        const title = "Titulo de la app";   
+        return (
+            <Header navigation={navigation} title={title} previous={previous}></Header>
+        );
+    }
 
     return (
         <Stack.Navigator
             initialRouteName={getInitialRoute()}
             headerMode="screen"
-            // screenOptions={{
-            //     header: ({ navigation, previous }) => {
-            //         return getHeader(navigation, previous);
-            //     }
-            // }}
+            screenOptions={{
+                header: ({ navigation, previous }) => {
+                    return getHeader(navigation, previous);
+                }
+            }}
         >
             <Stack.Screen name="home" component={HomeScreen} />
             <Stack.Screen name="list" component={ListScreen} />

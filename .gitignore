@@ -49,4 +49,4 @@ Thumbs.db
 *.wmv
 
 # Mongo files
-/backend/data/mongo/
+data/mongo/

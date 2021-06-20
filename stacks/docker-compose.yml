@@ -3,7 +3,7 @@ version: '3.3'
 services:
   react_native:
     build:
-      context: ../app/
+      context: ../services/app/
       args:
         - NODE_ENV=development
     container_name: react_native_app
@@ -19,15 +19,27 @@ services:
       - '19005:19005'
       - '19006:19006'
     volumes:  
-      - ../app:/app
+      - ../services/app:/app
     healthcheck:
       disable: true
+  
+  backend:
+      build:
+        context: ../services/backend/
+      container_name: node_backend
+      ports:
+        - '3000:3000'
+      depends_on: 
+        - mongo
+      volumes:
+        - '../services/backend:/app'
+      
   mongo:
     image: mongo:latest
     ports:
       - '27017:27017'
     volumes:
-      - './data/mongo:/data/db'
+      - '../data/mongo:/data/db'
 
   mongo-express:
     image: mongo-express:latest

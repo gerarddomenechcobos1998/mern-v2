@@ -1,0 +1,5 @@
+Hacer en este orden:
+- Nginx reverse proxy per CORS
+- Llamadas modelos con ApiCaller (opcional)
+- NoderedBackend
+- User auth (JWT) y usuarios mail+password encirpado

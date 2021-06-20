@@ -3,3 +3,4 @@ Hacer en este orden:
 - Llamadas modelos con ApiCaller (opcional)
 - NoderedBackend
 - User auth (JWT) y usuarios mail+password encirpado
+- Grunt to run project with just 1 command

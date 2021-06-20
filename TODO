@@ -4,3 +4,4 @@ Hacer en este orden:
 - NoderedBackend
 - User auth (JWT) y usuarios mail+password encirpado
 - Grunt to run project with just 1 command
+- No puedo acceder desde otra direccion LAN a ninguno de los servicios que estoy tirando con docker

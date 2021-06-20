@@ -48,6 +48,16 @@ services:
     ports:
       - '8081:8081'
 
+  node-red:
+    image: nodered/node-red
+    environment:
+      - TZ=Europe/Madrid
+    ports:
+      - '1880:1880'
+    depends_on: 
+      - mongo
+    volumes:
+      - '../services/node-red:/data'
     # webserver:
     #   image: nginx
     #   depends_on: 

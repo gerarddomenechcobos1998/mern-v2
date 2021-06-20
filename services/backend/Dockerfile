@@ -1,5 +1,5 @@
 # pull base image
-FROM node:12.18.1
+FROM node:14.13.1-buster-slim
 
 WORKDIR /app
 COPY package.json package.json

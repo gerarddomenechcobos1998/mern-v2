@@ -4,3 +4,11 @@ Reverse Nginx proxy: https://www.domysee.com/blogposts/reverse-proxy-nginx-docke
 Backend creation: https://rahmanfadhil.com/express-rest-api/ 
 React Navigation: https://reactnavigation.org/docs/getting-started/ 
 Drawer Navigation: https://reactnavigation.org/docs/drawer-based-navigation/ 
+
+
+
+node-red generate hash pw: 
+    1. Go inside docker container where node-red is running
+    2. node -e "console.log(require('bcryptjs').hashSync(process.argv[1], 8));" your-password-here
+
+node-red allow cors? https://nodered.org/docs/user-guide/runtime/securing-node-red#http-node-security 

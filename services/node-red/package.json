@@ -4,6 +4,10 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "node-red-contrib-mongodb3": "~2.0.1"
+        "node-red-contrib-actionflows": "~2.0.4",
+        "node-red-contrib-mongodb3": "~2.0.1",
+        "node-red-contrib-noop": "~1.1.0",
+        "node-red-contrib-string": "~1.0.0",
+        "node-red-contrib-uuid": "0.0.4"
     }
 }

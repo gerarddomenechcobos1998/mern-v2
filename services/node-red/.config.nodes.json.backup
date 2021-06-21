@@ -430,5 +430,84 @@
                 "file": "/usr/src/node-red/node_modules/node-red-node-tail/28-tail.js"
             }
         }
+    },
+    "node-red-contrib-mongodb3": {
+        "name": "node-red-contrib-mongodb3",
+        "version": "2.0.1",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "mongodb": {
+                "name": "mongodb",
+                "types": [
+                    "mongodb3",
+                    "mongodb3 in"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mongodb3",
+                "file": "/data/node_modules/node-red-contrib-mongodb3/mongodb/mongodb.js"
+            }
+        }
+    },
+    "node-red-contrib-actionflows": {
+        "name": "node-red-contrib-actionflows",
+        "version": "2.0.4",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "actionfilters": {
+                "name": "actionfilters",
+                "types": [
+                    "actionflows",
+                    "actionflows_in",
+                    "actionflows_out"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-actionflows",
+                "file": "/data/node_modules/node-red-contrib-actionflows/actionflows/actionflows.js"
+            }
+        }
+    },
+    "node-red-contrib-string": {
+        "name": "node-red-contrib-string",
+        "version": "1.0.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "string": {
+                "name": "string",
+                "types": [
+                    "string"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-string",
+                "file": "/data/node_modules/node-red-contrib-string/string/string.js"
+            }
+        }
+    },
+    "node-red-contrib-noop": {
+        "name": "node-red-contrib-noop",
+        "version": "1.1.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "no-op": {
+                "name": "no-op",
+                "types": [
+                    "no-op"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-noop",
+                "file": "/data/node_modules/node-red-contrib-noop/noop/noop.js"
+            }
+        }
     }
 }

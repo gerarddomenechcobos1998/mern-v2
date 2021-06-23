@@ -7,7 +7,7 @@ const routes = require("./routes");
 
 // Connect to MongoDB database
 mongoose 
-	.connect("mongodb://mongo:27017/db", { useNewUrlParser: true })
+	.connect("mongodb://db:27017/db", { useNewUrlParser: true })
 	.then(() => {
 		const app = express();
 		app.use(express.json()); /*Express by default is not able to read a request body if we no use this*/

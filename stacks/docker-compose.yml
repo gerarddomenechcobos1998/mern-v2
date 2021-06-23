@@ -30,23 +30,25 @@ services:
       ports:
         - '3000:3000'
       depends_on: 
-        - mongo
+        - db
       volumes:
         - '../services/backend:/app'
       
-  mongo:
+  db:
     image: mongo:latest
     ports:
       - '27017:27017'
     volumes:
-      - '../data/mongo:/data/db'
+      - '../data/db:/data/db'
 
   mongo-express:
     image: mongo-express:latest
     depends_on: 
-      - mongo 
+      - db 
     ports:
       - '8081:8081'
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=db
 
   node-red:
     image: nodered/node-red
@@ -55,7 +57,7 @@ services:
     ports:
       - '1880:1880'
     depends_on: 
-      - mongo
+      - db
     volumes:
       - '../services/node-red:/data'
     # webserver:

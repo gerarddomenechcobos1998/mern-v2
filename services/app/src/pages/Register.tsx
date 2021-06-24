@@ -56,7 +56,6 @@ const RegisterScreen = ({ navigation }: Props) => {
     }
 
     const onRegisterPress = async () => {
-        // if (emailValidator(email) && validarContraseña(password, rePassword)){
         if (validarContraseña(password, rePassword) && emailValidator(email)){
             // generate hash to encrypt the password
             generateHash(password);

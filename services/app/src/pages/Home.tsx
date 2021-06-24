@@ -7,7 +7,7 @@ import ApiCaller from '../core/ApiCaller';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 type Props = {
-  navigation: Navigation;
+  navigation: any;
 };
 
 const HomeScreen = ({ navigation }: Props) => {
@@ -48,7 +48,7 @@ const HomeScreen = ({ navigation }: Props) => {
         {
           activites?activites.map((activity:any, index:number) =>{
             return(
-              <Card key={index} style={{width:300, margin:20}} onPress={()=>navigation.navigate('view', {id: activity?._id})}>
+              <Card key={index} style={{width:300, margin:20}} onPress={()=>navigation.push('view',{id: activity?._id})}>
                 <Card.Content>
                   <View style={{flexDirection:'row'}}>
                     <View style={{flexDirection:'column', flex:2}}>
@@ -61,7 +61,7 @@ const HomeScreen = ({ navigation }: Props) => {
                         color='#4566f7'
                         size={20}
                         style={{marginBottom:10}}
-                        onPress={()=>navigation.navigate('update', {id: activity?._id})}
+                        onPress={()=>navigation.push('update',{id: activity?._id})}
                       />
                       <MaterialCommunityIcons
                         name="delete"

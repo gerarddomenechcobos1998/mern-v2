@@ -22,18 +22,7 @@ services:
       - ../services/app:/app
     healthcheck:
       disable: true
-  
-  backend:
-      build:
-        context: ../services/backend/
-      container_name: node_backend
-      ports:
-        - '3000:3000'
-      depends_on: 
-        - db
-      volumes:
-        - '../services/backend:/app'
-      
+           
   db:
     image: mongo:latest
     ports:

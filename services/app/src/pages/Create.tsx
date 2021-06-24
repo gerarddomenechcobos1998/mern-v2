@@ -16,7 +16,7 @@ const CreateScreen = ({ navigation }: Props) => {
   var apiCaller = new ApiCaller();
 
   const createActivity = async (activity:any) => {
-    const activityRes = await apiCaller.call('/activities', 'POST', activity);
+    const activityRes = await apiCaller.call('/activity', 'POST', activity);
     navigation.navigate('view', {id: activityRes?._id})
   }
   const onCreatePress = () => {

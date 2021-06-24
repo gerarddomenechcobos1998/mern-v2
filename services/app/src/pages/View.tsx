@@ -14,7 +14,7 @@ const ViewScreen = ({ navigation, route }: Props) => {
   var apiCaller = new ApiCaller();
 
   const readActivity = async ()=>{
-    const dataRes = await apiCaller.call('/activities/'+ route.params?.id, 'GET');
+    const dataRes = await apiCaller.call('/activity/'+ route.params?.id, 'GET');
     setArticle(dataRes); 
   }
 

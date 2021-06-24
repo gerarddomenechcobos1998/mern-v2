@@ -18,14 +18,14 @@ const UpdateScreen = ({ navigation, route }: Props) => {
   var apiCaller = new ApiCaller();
 
   const readActivity = async ()=>{
-    const dataRes = await apiCaller.call('/activities/'+ route.params?.id, 'GET');
+    const dataRes = await apiCaller.call('/activity/'+ route.params?.id, 'GET');
     setName(dataRes.name);
     setProperties(dataRes.properties);
     setActivityId(dataRes._id);
   }
 
   const updateActivity = async (activity:any) => {
-    const activityRes = await apiCaller.call('/activities/'+activityId, 'PUT', activity);
+    const activityRes = await apiCaller.call('/activity/'+activityId, 'PUT', activity);
     navigation.navigate('view', {id: activityId})
   }
   const onUpdatePress = () => {

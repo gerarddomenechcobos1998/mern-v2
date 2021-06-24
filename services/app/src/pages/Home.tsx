@@ -17,11 +17,12 @@ const HomeScreen = ({ navigation }: Props) => {
   var apiCaller = new ApiCaller();
 
   const readArticles = async ()=>{
-    const dataRes = await apiCaller.call('/activities', 'GET');
+    const dataRes = await apiCaller.call('/activity', 'GET');  
     setActivities(dataRes); 
   }
   const deleteActivity = async ()=>{
-    await apiCaller.call('/activities/'+deleteId, 'DELETE');
+    console.log("activity Deleted")
+    await apiCaller.call('/activity/'+deleteId+'/delete', 'GET');
   }
   const onDeleteActivity = (id:string)=>{
     setDeleteId(id);
@@ -94,7 +95,7 @@ const HomeScreen = ({ navigation }: Props) => {
             <Button labelStyle={{color:'white'}} style={{backgroundColor:'#d12424', marginLeft:20}} uppercase={false}onPress={confirmDelete}>Eliminar</Button>
           </Dialog.Actions>
         </Dialog>
-      </Portal>
+      </Portal> 
     </View>
   );
 };

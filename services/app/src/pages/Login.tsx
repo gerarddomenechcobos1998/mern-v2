@@ -23,8 +23,24 @@ const LoginScreen = ({ navigation }: Props) => {
         setVisible(!visible);
     }
 
+    const validatePassword = (password: string, hash: string) => {
+        const bcrypt = require("bcryptjs")
+        bcrypt.compare(password, hash, function(error, isMatch) {
+        if (error) {
+            throw error
+        } else if (!isMatch) {
+            console.log("Password doesn't match!")
+        } else {
+            console.log("Password matches!")
+        }
+        })
+    }
+
     const onLogginPress = async () => {
         // Llamar a la api y ver si las contraseñas coinciden
+        const res = await apiCaller.call('/profile/'+email,'GET');
+        const hash = res?.password;
+        validatePassword(password, hash);
         // Hacer un use context del usuario
         // Entrar en Home       
     }

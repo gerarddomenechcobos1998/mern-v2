@@ -5,7 +5,7 @@ Backend creation: https://rahmanfadhil.com/express-rest-api/
 React Navigation: https://reactnavigation.org/docs/getting-started/ 
 Drawer Navigation: https://reactnavigation.org/docs/drawer-based-navigation/ 
 
-
+Bcrypt hash encryption for password: https://coderrocketfuel.com/article/store-passwords-in-mongodb-with-node-js-mongoose-and-bcrypt
 
 node-red generate hash pw: 
     1. Go inside docker container where node-red is running

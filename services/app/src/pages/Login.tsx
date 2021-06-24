@@ -6,7 +6,7 @@ import { theme } from '../core/theme';
 import ApiCaller from '../core/ApiCaller';
 
 type Props = {
-  navigation: Navigation;
+  navigation: any;
 };
 
 const LoginScreen = ({ navigation }: Props) => {
@@ -14,7 +14,7 @@ const LoginScreen = ({ navigation }: Props) => {
     const [ email, setEmail ] = useState<string>('');
     const [ password, setPassword ] = useState<string>('');
     const [ visible, setVisible ] = useState<boolean>(false);
-    const [ hash, setHash ] = useState('');
+    const [ matchedPassword, setMatchedPassword ] = useState(false);
 
     var apiCaller = new ApiCaller();
 
@@ -29,9 +29,9 @@ const LoginScreen = ({ navigation }: Props) => {
         if (error) {
             throw error
         } else if (!isMatch) {
-            console.log("Password doesn't match!")
+            alert("Contraseña o usuarios no validos")
         } else {
-            console.log("Password matches!")
+            navigation.pop({routeName:"home"})
         }
         })
     }

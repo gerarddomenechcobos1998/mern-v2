@@ -49,7 +49,8 @@ const linking = {
 					update: 'update',
 					view:'view',
                     home:'home',
-					register: 'register'
+					register: 'register',
+					login: 'login'
 			}
 		}
 	},

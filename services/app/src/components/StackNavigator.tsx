@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen, ViewScreen, UpdateScreen, CreateScreen, RegisterScreen} from '../pages';
+import { HomeScreen, ViewScreen, UpdateScreen, CreateScreen, RegisterScreen, LoginScreen } from '../pages';
 import Header from './Header';
 import { Navigation } from '../types';
 
@@ -38,6 +38,7 @@ const StackNavigator = () => {
             <Stack.Screen name="view" component={ViewScreen} />
             <Stack.Screen name="create" component={CreateScreen} />
             <Stack.Screen name="register" component={RegisterScreen} />
+            <Stack.Screen name="login" component={LoginScreen} />
         </Stack.Navigator>
     );
 };

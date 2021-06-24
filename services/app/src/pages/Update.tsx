@@ -25,7 +25,7 @@ const UpdateScreen = ({ navigation, route }: Props) => {
   }
 
   const updateActivity = async (activity:any) => {
-    const activityRes = await apiCaller.call('/activity/'+activityId, 'PUT', activity);
+    const activityRes = await apiCaller.call('/activity/'+activityId, 'POST', activity);
     navigation.navigate('view', {id: activityId})
   }
   const onUpdatePress = () => {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen, ListScreen, ViewScreen, UpdateScreen, CreateScreen} from '../pages';
+import { HomeScreen, ViewScreen, UpdateScreen, CreateScreen, RegisterScreen} from '../pages';
 import Header from './Header';
 import { Navigation } from '../types';
 
@@ -12,7 +12,7 @@ const StackNavigator = () => {
     const Stack = createStackNavigator();                       
     // returns the name of the screen that is first route
     const getInitialRoute = () => {
-        return "home";
+        return "register";
     }
  
 
@@ -37,6 +37,7 @@ const StackNavigator = () => {
             <Stack.Screen name="update" component={UpdateScreen} />
             <Stack.Screen name="view" component={ViewScreen} />
             <Stack.Screen name="create" component={CreateScreen} />
+            <Stack.Screen name="register" component={RegisterScreen} />
         </Stack.Navigator>
     );
 };

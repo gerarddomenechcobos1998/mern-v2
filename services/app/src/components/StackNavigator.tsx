@@ -12,7 +12,7 @@ const StackNavigator = () => {
     const Stack = createStackNavigator();                       
     // returns the name of the screen that is first route
     const getInitialRoute = () => {
-        return "register";
+        return "login";
     }
  
 

@@ -2,8 +2,8 @@ import React, { memo, useState } from 'react';
 import { View, Text} from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
 import { Navigation } from '../types';
-import { theme } from '../core/theme';
 import ApiCaller from '../core/ApiCaller';
+import { CommonActions } from '@react-navigation/native';
 
 type Props = {
   navigation: Navigation;
@@ -54,7 +54,13 @@ const RegisterScreen = ({ navigation }: Props) => {
             }
         })
     }
-
+    const resetStackNavigator = (routeName:string) => {
+        const resetAction = CommonActions.reset({
+            index: 1,
+            routes: [{ name: routeName}]
+        });
+        navigation.dispatch(resetAction);
+    }
     const onRegisterPress = async () => {
         if (validarContraseña(password, rePassword) && emailValidator(email)){
             // generate hash to encrypt the password
@@ -64,6 +70,9 @@ const RegisterScreen = ({ navigation }: Props) => {
             profile.password = hash;
             console.log(hash);
             await apiCaller.call('/profile','POST', profile);
+            // TO DO: validate if register was right, missing validation of setting email as unique key
+            resetStackNavigator('home');
+
         }
         else{
             console.log("no registrado");

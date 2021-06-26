@@ -78,6 +78,9 @@ const RegisterScreen = ({ navigation }: Props) => {
             console.log("no registrado");
         }
     }
+    const onBackPress = async () => {
+        resetStackNavigator('login');
+    }
 
     return (
         <View style={{ flex:1 }}>
@@ -119,6 +122,10 @@ const RegisterScreen = ({ navigation }: Props) => {
             <View style={{ flex:1, flexDirection:'column', justifyContent:'flex-start' }}>
                 <Button mode='contained' style={{ alignSelf:'center', width:200}} uppercase={false} onPress={()=> onRegisterPress()}>Registrarse</Button>
             </View>
+            <View style={{ flex:1, flexDirection:'column', justifyContent:'flex-start' }}>
+                <Button mode='contained' style={{ alignSelf:'center', width:200}} uppercase={false} onPress={()=>  onBackPress()}>Atras</Button>
+            </View>
+           
         </View>
         </View>
     );

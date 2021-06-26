@@ -1,9 +1,8 @@
 import React, { memo, useState } from 'react';
 import { View, Text} from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
-import { Navigation } from '../types';
-import { theme } from '../core/theme';
 import ApiCaller from '../core/ApiCaller';
+import { CommonActions } from '@react-navigation/native';
 
 type Props = {
   navigation: any;
@@ -31,11 +30,18 @@ const LoginScreen = ({ navigation }: Props) => {
         } else if (!isMatch) {
             alert("Contraseña o usuarios no validos")
         } else {
-            navigation.pop({routeName:"home"})
+            //navigation.navigate("home")
+            resetStackNavigator('home');
         }
         })
     }
-
+    const resetStackNavigator = (routeName:string) => {
+        const resetAction = CommonActions.reset({
+            index: 1,
+            routes: [{ name: routeName}]
+        });
+        navigation.dispatch(resetAction);
+    }
     const onLogginPress = async () => {
         // Llamar a la api y ver si las contraseñas coinciden
         const res = await apiCaller.call('/profile/'+email,'GET');

@@ -1,7 +1,11 @@
 Hacer en este orden:
-- Nginx reverse proxy per CORS
-- Llamadas modelos con ApiCaller (opcional)
-- NoderedBackend
-- User auth (JWT) y usuarios mail+password encirpado
-- Grunt to run project with just 1 command
-- No puedo acceder desde otra direccion LAN a ninguno de los servicios que estoy tirando con docker
+1 - Context provider (USUARIO)
+2 - User auth (JWT token)
+3 - Llamadas modelos con ApiCaller (opcional)
+4 - Cuando registro un usuario mirar si el email es UNIQUE y hacer las modificaciones oportunas.
+5 - Llamadas modelos con ApiCaller (opcional)
+6 - Recuperar password
+
+EXTRA - Nginx reverse proxy per CORS y servicios
+EXTRA - Grunt to run project with just 1 command
+

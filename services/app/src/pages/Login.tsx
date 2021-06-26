@@ -50,6 +50,12 @@ const LoginScreen = ({ navigation }: Props) => {
         // Hacer un use context del usuario
         // Entrar en Home       
     }
+    const onRegisterPress = async () => {
+        // Llamar a la api y ver si las contraseñas coinciden
+        resetStackNavigator('register');
+        // Hacer un use context del usuario
+        // Entrar en Home       
+    }
 
     return (
         <View style={{ flex:1 }}>
@@ -80,6 +86,9 @@ const LoginScreen = ({ navigation }: Props) => {
             </View>
             <View style={{ flex:1, flexDirection:'column', justifyContent:'flex-start' }}>
                 <Button mode='contained' style={{ alignSelf:'center', width:200}} uppercase={false} onPress={()=> onLogginPress()}>Entrar</Button>
+            </View>
+            <View style={{ flex:1, flexDirection:'column', justifyContent:'flex-start' }}>
+                <Button mode='outlined' style={{ alignSelf:'center', width:200}} uppercase={false} onPress={()=> onRegisterPress()}>Registrar</Button>
             </View>
         </View>
         </View>

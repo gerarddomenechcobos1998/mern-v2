@@ -10,7 +10,6 @@ type Props = {
 };
 
 const RegisterScreen = ({ navigation }: Props) => {
-    
     const [ email, setEmail ] = useState<string>('');
     const [ password, setPassword ] = useState<string>('');
     const [ rePassword, setRePassword ] = useState<string>('');

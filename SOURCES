@@ -7,8 +7,10 @@ Drawer Navigation: https://reactnavigation.org/docs/drawer-based-navigation/
 
 Bcrypt hash encryption for password: https://coderrocketfuel.com/article/store-passwords-in-mongodb-with-node-js-mongoose-and-bcrypt
 
-node-red generate hash pw: 
+node-red generate hash pw for nodered credentals: 
     1. Go inside docker container where node-red is running
     2. node -e "console.log(require('bcryptjs').hashSync(process.argv[1], 8));" your-password-here
 
 node-red allow cors? https://nodered.org/docs/user-guide/runtime/securing-node-red#http-node-security 
+
+node-red add modules (with require('module_name')):https://discourse.nodered.org/t/using-the-functionglobalcontext/36445

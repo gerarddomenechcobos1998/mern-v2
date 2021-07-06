@@ -22,19 +22,6 @@ const LoginScreen = ({ navigation }: Props) => {
         setVisible(!visible);
     }
 
-    const validatePassword = (password: string, hash: string) => {
-        const bcrypt = require("bcryptjs")
-        bcrypt.compare(password, hash, function(error, isMatch) {
-        if (error) {
-            throw error
-        } else if (!isMatch) {
-            alert("Contraseña o usuarios no validos")
-        } else {
-            //navigation.navigate("home")
-            resetStackNavigator('home');
-        }
-        })
-    }
     const resetStackNavigator = (routeName:string) => {
         const resetAction = CommonActions.reset({
             index: 1,
@@ -44,17 +31,17 @@ const LoginScreen = ({ navigation }: Props) => {
     }
     const onLogginPress = async () => {
         // Llamar a la api y ver si las contraseñas coinciden
-        const res = await apiCaller.call('/profile/'+email,'GET');
-        const hash = res?.password;
-        validatePassword(password, hash);
+        let profile: any = {};
+        profile.email = email;
+        profile.password = password; // se envia en claor, añadir certificado SSL
+        const res = await apiCaller.call('/profile/validate','POST', profile);
+        //si la respuesta es correcta validamos
         // Hacer un use context del usuario
         // Entrar en Home       
+        resetStackNavigator('home');   
     }
     const onRegisterPress = async () => {
-        // Llamar a la api y ver si las contraseñas coinciden
-        resetStackNavigator('register');
-        // Hacer un use context del usuario
-        // Entrar en Home       
+        resetStackNavigator('register');   
     }
 
     return (

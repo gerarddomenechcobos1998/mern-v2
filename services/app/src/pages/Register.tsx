@@ -37,18 +37,22 @@ const RegisterScreen = ({ navigation }: Props) => {
         setVisible(!visible);
     }
 
-    const generateHash = (password:string) => {
+    const generateHashAndSendRequest = async (password:string) => {
         const bcrypt = require("bcryptjs")
         const saltRounds = 10;
-        bcrypt.genSalt(saltRounds, function (saltError: any, salt: any) {
+        bcrypt.genSalt(saltRounds, async function (saltError: any, salt: any) {
             if (saltError) {
               throw saltError
             } else {
-              bcrypt.hash(password, salt, function(hashError:any, hash:any) {
+                bcrypt.hash(password, salt, async function(hashError:any, hash:any) {
                 if (hashError) {
                   throw hashError
                 } else {
-                  setHash(hash);
+                  //setHash(hash);
+                  let profile: any = {};
+                  profile.email = email;
+                  profile.password = hash;
+                  await apiCaller.call('/profile','POST', profile);
                 }
               })
             }
@@ -61,17 +65,13 @@ const RegisterScreen = ({ navigation }: Props) => {
         });
         navigation.dispatch(resetAction);
     }
-    const onRegisterPress = async () => {
+    const onRegisterPress = () => {
         if (validarContraseña(password, rePassword) && emailValidator(email)){
             // generate hash to encrypt the password
-            generateHash(password);
-            let profile: any = {};
-            profile.email = email;
-            profile.password = hash;
-            console.log(hash);
-            await apiCaller.call('/profile','POST', profile);
+            generateHashAndSendRequest(password);
+            
             // TO DO: validate if register was right, missing validation of setting email as unique key
-            resetStackNavigator('home');
+            resetStackNavigator('login');
 
         }
         else{

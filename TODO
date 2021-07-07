@@ -5,7 +5,7 @@ Hacer en este orden:
 4 - Cuando registro un usuario mirar si el email es UNIQUE y hacer las modificaciones oportunas.
 5 - Llamadas modelos con ApiCaller (opcional)
 6 - Recuperar password
-
+7 - añadir certificado ssl (https) ya que las password se envian en claro
 EXTRA - Nginx reverse proxy per CORS y servicios
 EXTRA - Grunt to run project with just 1 command
 

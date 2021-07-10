@@ -48,10 +48,10 @@ const RegisterScreen = ({ navigation }: Props) => {
                   throw hashError
                 } else {
                   //setHash(hash);
-                  let profile: any = {};
-                  profile.email = email;
-                  profile.password = hash;
-                  await apiCaller.call('/profile','POST', profile);
+                  let user: any = {};
+                  user.email = email;
+                  user.password = hash;
+                  await apiCaller.call('/user','POST', user);
                 }
               })
             }

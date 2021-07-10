@@ -30,15 +30,23 @@ const LoginScreen = ({ navigation }: Props) => {
         navigation.dispatch(resetAction);
     }
     const onLogginPress = async () => {
+
         // Llamar a la api y ver si las contraseñas coinciden
-        let profile: any = {};
-        profile.email = email;
-        profile.password = password; // se envia en claor, añadir certificado SSL
-        const res = await apiCaller.call('/profile/validate','POST', profile);
+        let user: any = {};
+        user.email = email;
+        user.password = password; // se envia en claor, añadir certificado SSL
+        let res:any;
+        try{
+            res = await apiCaller.call('/user/validate','POST', user);
+            resetStackNavigator('home'); 
+        }catch(e){
+            console.error(e);
+            alert("Credenciales no válidas");
+        }
         //si la respuesta es correcta validamos
         // Hacer un use context del usuario
         // Entrar en Home       
-        resetStackNavigator('home');   
+          
     }
     const onRegisterPress = async () => {
         resetStackNavigator('register');   

@@ -41,7 +41,9 @@ const LoginScreen = ({ navigation }: Props) => {
             resetStackNavigator('home'); 
         }catch(e){
             console.error(e);
-            alert("Credenciales no válidas");
+            setEmail('');
+            setPassword('');
+            alert("Credenciales no válidas");    
         }
         //si la respuesta es correcta validamos
         // Hacer un use context del usuario

@@ -1,11 +1,10 @@
 Hacer en este orden:
+1 - Were to save JWT token? (AuthHeader-Barer)
 1 - Context provider (USUARIO)
-2 - User auth (JWT token)
 3 - Llamadas modelos con ApiCaller (opcional)
-4 - Cuando registro un usuario mirar si el email es UNIQUE y hacer las modificaciones oportunas.
-5 - Llamadas modelos con ApiCaller (opcional)
-6 - Recuperar password
-7 - añadir certificado ssl (https) ya que las password se envian en claro
+4 - Recuperar password
+5 - añadir certificado ssl (https) ya que las password se envian en claro
+6 - Renovacion de los tokens JWT cada 15 minutos
 EXTRA - Nginx reverse proxy per CORS y servicios
 EXTRA - Grunt to run project with just 1 command
 

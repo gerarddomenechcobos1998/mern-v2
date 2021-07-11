@@ -13,7 +13,6 @@ const LoginScreen = ({ navigation }: Props) => {
     const [ email, setEmail ] = useState<string>('');
     const [ password, setPassword ] = useState<string>('');
     const [ visible, setVisible ] = useState<boolean>(false);
-    const [ matchedPassword, setMatchedPassword ] = useState(false);
 
     var apiCaller = new ApiCaller();
 
@@ -58,28 +57,31 @@ const LoginScreen = ({ navigation }: Props) => {
         <View style={{ flex:1 }}>
         <View style={{alignSelf:'center', flex:1, width:'40%', marginBottom:'5%', marginTop:50}}>
             <View style={{ flex:10, flexDirection:'column'}}>
-            <TextInput
-                mode= 'outlined'
-                label='Email'
-                placeholder='Email'
-                value={email}
-                autoCompleteType='email'
-                keyboardType='email-address'
-                onChangeText={text=> setEmail(text)}
-                style={{marginBottom:40}}            
-            />
-            <TextInput
-                mode= 'outlined'
-                label='Contraseña'
-                placeholder='Contraseña'
-                value={password}
-                autoCompleteType='password'
-                autoCorrect= {false}
-                onChangeText={text=> setPassword(text)}
-                style={{marginBottom:40}}
-                secureTextEntry={!visible}
-                right= {<TextInput.Icon name={visible?'eye-off':'eye'} onPress={()=> onToggleShowPassword()}/>}
-            />
+                <TextInput
+                    mode= 'outlined'
+                    label='Email'
+                    placeholder='Email'
+                    value={email}
+                    autoCompleteType='email'
+                    keyboardType='email-address'
+                    onChangeText={text=> setEmail(text)}
+                    style={{marginBottom:40}}            
+                />
+                <TextInput
+                    mode= 'outlined'
+                    label='Contraseña'
+                    placeholder='Contraseña'
+                    value={password}
+                    autoCompleteType='password'
+                    autoCorrect= {false}
+                    onChangeText={text=> setPassword(text)}
+                    style={{marginBottom:40}}
+                    secureTextEntry={!visible}
+                    right= {<TextInput.Icon name={visible?'eye-off':'eye'} onPress={()=> onToggleShowPassword()}/>}
+                />
+                <View style={{flexDirection:'column', flex:1}}>
+                    <Text onPress={()=>{resetStackNavigator('forgotPassword')}} style={{textAlign:'right', fontSize:18, lineHeight:20, fontWeight:'700'}}>Forgot password?</Text>
+                </View>
             </View>
             <View style={{ flex:1, flexDirection:'column', justifyContent:'flex-start' }}>
                 <Button mode='contained' style={{ alignSelf:'center', width:200}} uppercase={false} onPress={()=> onLogginPress()}>Entrar</Button>

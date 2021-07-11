@@ -50,7 +50,8 @@ const linking = {
 					view:'view',
                     home:'home',
 					register: 'register',
-					login: 'login'
+					login: 'login',
+					forgotPassword: 'forgotPassword'
 			}
 		}
 	},

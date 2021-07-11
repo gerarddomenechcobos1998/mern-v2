@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen, ViewScreen, UpdateScreen, CreateScreen, RegisterScreen, LoginScreen } from '../pages';
+import { HomeScreen, ViewScreen, UpdateScreen, CreateScreen, RegisterScreen, LoginScreen, ForgotPasswordScreen } from '../pages';
 import Header from './Header';
 import { Navigation } from '../types';
 
@@ -39,6 +39,7 @@ const StackNavigator = () => {
             <Stack.Screen name="create" component={CreateScreen} />
             <Stack.Screen name="register" component={RegisterScreen} />
             <Stack.Screen name="login" component={LoginScreen} />
+            <Stack.Screen name="forgotPassword" component={ForgotPasswordScreen} />
         </Stack.Navigator>
     );
 };

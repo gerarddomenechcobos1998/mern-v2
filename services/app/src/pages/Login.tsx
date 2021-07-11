@@ -43,7 +43,7 @@ const LoginScreen = ({ navigation }: Props) => {
             console.error(e);
             setEmail('');
             setPassword('');
-            alert("Credenciales no válidas");    
+            alert("No valid credentials!");    
         }
         //si la respuesta es correcta validamos
         // Hacer un use context del usuario

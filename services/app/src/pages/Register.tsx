@@ -51,7 +51,17 @@ const RegisterScreen = ({ navigation }: Props) => {
                   let user: any = {};
                   user.email = email;
                   user.password = hash;
-                  await apiCaller.call('/user','POST', user);
+                  try{
+                    await apiCaller.call('/user','POST', user);
+                    resetStackNavigator('login');
+                  }catch(e){
+                    console.error(e);
+                    // if we get a conflict with the email (already exist) we reset all.
+                    alert("The email '"+email+"' was already registered!")
+                    setPassword('');
+                    setRePassword('');
+                    setEmail('');
+                  }
                 }
               })
             }
@@ -67,13 +77,15 @@ const RegisterScreen = ({ navigation }: Props) => {
     const onRegisterPress = () => {
         if (validarContraseña(password, rePassword) && emailValidator(email)){
             // generate hash to encrypt the password
-            generateHashAndSendRequest(password);
-            
-            // TO DO: validate if register was right, missing validation of setting email as unique key
-            resetStackNavigator('login');
-
+            generateHashAndSendRequest(password);           
         }
         else{
+            if(validarContraseña(password, rePassword)){
+                alert("Las contraseñas no coinciden");
+            }
+            if(emailValidator(email)){
+                alert("El email introducido, '"+email+"' no es un email valido");
+            }
             console.log("no registrado");
         }
     }

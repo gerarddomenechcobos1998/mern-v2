@@ -95,7 +95,7 @@ const RegisterScreen = ({ navigation }: Props) => {
 
     return (
         <View style={{ flex:1 }}>
-        <View style={{alignSelf:'center', flex:1, width:'40%', marginBottom:'5%', marginTop:50}}>
+        <View style={{alignSelf:'center', flex:1, width:'80%', maxWidth:400, marginBottom:'5%', marginTop:50}}>
             <View style={{ flex:10, flexDirection:'column'}}>
             <TextInput
                 mode= 'outlined'

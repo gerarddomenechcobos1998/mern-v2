@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default {
+var Storage = {
     write: async function write(key: string, value: any): Promise<void> {
         try{
             const jsonValue = JSON.stringify(value)
@@ -32,3 +32,4 @@ export default {
         }
     }
 }
+export default Storage

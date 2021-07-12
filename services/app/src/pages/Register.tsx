@@ -101,7 +101,6 @@ const RegisterScreen = ({ navigation }: Props) => {
                 mode= 'outlined'
                 label='Email'
                 placeholder='Email'
-                value={email}
                 autoCompleteType='email'
                 keyboardType='email-address'
                 onChangeText={text=> setEmail(text)}
@@ -111,7 +110,6 @@ const RegisterScreen = ({ navigation }: Props) => {
                 mode= 'outlined'
                 label='Contraseña'
                 placeholder='Contraseña'
-                value={password}
                 autoCompleteType='password'
                 autoCorrect= {false}
                 onChangeText={text=> setPassword(text)}
@@ -123,7 +121,6 @@ const RegisterScreen = ({ navigation }: Props) => {
                 mode= 'outlined'
                 label='Repetir contraseña'
                 placeholder='Repetir contraseña'
-                value={rePassword}
                 autoCompleteType='password'
                 autoCorrect= {false}
                 onChangeText={text=> setRePassword(text)}

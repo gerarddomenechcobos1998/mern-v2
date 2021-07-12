@@ -45,7 +45,6 @@ const ForgotPasswordScreen = ({ navigation }: Props) => {
                     mode= 'outlined'
                     label='Email'
                     placeholder='Email'
-                    value={email}
                     autoCompleteType='email'
                     keyboardType='email-address'
                     onChangeText={text=> setEmail(text)}

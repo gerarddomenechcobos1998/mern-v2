@@ -61,7 +61,6 @@ const LoginScreen = ({ navigation }: Props) => {
                     mode= 'outlined'
                     label='Email'
                     placeholder='Email'
-                    value={email}
                     autoCompleteType='email'
                     keyboardType='email-address'
                     onChangeText={text=> setEmail(text)}
@@ -71,7 +70,6 @@ const LoginScreen = ({ navigation }: Props) => {
                     mode= 'outlined'
                     label='Contraseña'
                     placeholder='Contraseña'
-                    value={password}
                     autoCompleteType='password'
                     autoCorrect= {false}
                     onChangeText={text=> setPassword(text)}

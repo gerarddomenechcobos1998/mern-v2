@@ -4,7 +4,7 @@ export const theme = {
   ...DefaultTheme,
   fonts: {
     regular: {fontFamily:"Archivo-Regular"},
-    medium: {fontFamily:"Archivo-Megular"},
+    medium: {fontFamily:"Archivo-Medium"},
     light: {fontFamily:"Archivo-Light"},
     bold: {fontFamily:"Archivo-Bold"}
   },

@@ -1,10 +1,12 @@
 Hacer en este orden:
-1 - Were to save JWT token? (AuthHeader-Barer)
-1 - Context provider (USUARIO)
-3 - Llamadas modelos con ApiCaller (opcional)
-4 - Recuperar password
-5 - añadir certificado ssl (https) ya que las password se envian en claro
-6 - Renovacion de los tokens JWT cada 15 minutos
+1 - Access the endpoints via API CALLER and JWT TOKEN (AuthHeader - barer)
+2 - Llamadas modelos con ApiCaller (opcional)
+3 - Recuperar password (Mandrill o mailgun)
+4 - añadir certificado ssl (https) ya que las password se envian en claro
+5 - Renovacion de los tokens JWT cada 15 minutos
 EXTRA - Nginx reverse proxy per CORS y servicios
+EXTRA - RPI como AP, abre interfaz de usuario en puerto 81 para conectarse a una red o se abre a si misma como un AP.
+Abre un protrainer con todos los contendores (mirar que db no es valido con rpi). Abre un vscode online!!! donde poder editar. en   
+el portrainer podremos desplegar todos los servicios.
 EXTRA - Grunt to run project with just 1 command
 

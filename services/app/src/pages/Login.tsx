@@ -15,7 +15,7 @@ const LoginScreen = ({ navigation }: Props) => {
     const [ email, setEmail ] = useState<string>('');
     const [ password, setPassword ] = useState<string>('');
     const [ visible, setVisible ] = useState<boolean>(false);
-    const {user, setUser} = useContext(UserContext)
+    const { setUser} = useContext(UserContext)
 
     var apiCaller = new ApiCaller();
 

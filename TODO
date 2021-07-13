@@ -10,3 +10,7 @@ Abre un protrainer con todos los contendores (mirar que db no es valido con rpi)
 el portrainer podremos desplegar todos los servicios.
 EXTRA - Grunt to run project with just 1 command
 
+
+
+Context de usuario que se comparta por toda la app, el usuario se lee una unica vez del local storage y se guarda en el contexto (podria
+hacerse por ejemplo en el stackNavigator)

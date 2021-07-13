@@ -14,7 +14,6 @@ const RegisterScreen = ({ navigation }: Props) => {
     const [ password, setPassword ] = useState<string>('');
     const [ rePassword, setRePassword ] = useState<string>('');
     const [ visible, setVisible ] = useState<boolean>(false);
-    const [ hash, setHash ] = useState('');
 
     var apiCaller = new ApiCaller();
     
@@ -35,38 +34,6 @@ const RegisterScreen = ({ navigation }: Props) => {
     const onToggleShowPassword = () => {
         setVisible(!visible);
     }
-
-    const generateHashAndSendRequest = async (password:string) => {
-        const bcrypt = require("bcryptjs")
-        const saltRounds = 10;
-        bcrypt.genSalt(saltRounds, async function (saltError: any, salt: any) {
-            if (saltError) {
-              throw saltError
-            } else {
-                bcrypt.hash(password, salt, async function(hashError:any, hash:any) {
-                if (hashError) {
-                  throw hashError
-                } else {
-                  //setHash(hash);
-                  let user: any = {};
-                  user.email = email;
-                  user.password = hash;
-                  try{
-                    await apiCaller.call('/user','POST', user);
-                    resetStackNavigator('login');
-                  }catch(e){
-                    console.error(e);
-                    // if we get a conflict with the email (already exist) we reset all.
-                    alert("The email '"+email+"' was already registered!")
-                    setPassword('');
-                    setRePassword('');
-                    setEmail('');
-                  }
-                }
-              })
-            }
-        })
-    }
     const resetStackNavigator = (routeName:string) => {
         const resetAction = CommonActions.reset({
             index: 1,
@@ -74,10 +41,23 @@ const RegisterScreen = ({ navigation }: Props) => {
         });
         navigation.dispatch(resetAction);
     }
-    const onRegisterPress = () => {
+    const onRegisterPress = async () => {
         if (validarContraseña(password, rePassword) && emailValidator(email)){
-            // generate hash to encrypt the password
-            generateHashAndSendRequest(password);           
+            // register
+            let user: any = {};
+            user.email = email;
+            user.password = password;
+            try{
+            await apiCaller.call('/user/register','POST', user);
+            resetStackNavigator('login');
+            }catch(e){
+            console.error(e);
+            // if we get a conflict with the email (already exist) we reset all.
+            alert("The email '"+email+"' was already registered!")
+            setPassword('');
+            setRePassword('');
+            setEmail('');
+            }        
         }
         else{
             if(validarContraseña(password, rePassword)){

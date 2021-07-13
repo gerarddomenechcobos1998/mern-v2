@@ -4,21 +4,21 @@ class User {
     email: string;
     token: string;
     type: string;
-    confirmed: boolean;
+    status: boolean;
     
-    constructor(email: string, token: string, type: string, confirmed: boolean) {
+    constructor(email: string, token: string, type: string, status: boolean) {
         this.email = email;
         this.token = token;
         this.type = type;
-        this.confirmed = confirmed;
+        this.status = status;
     }
     // Creates new User object
     load(data: any): User {
-        return new User(data.email, data.token, data.type, data.confirmed);
+        return new User(data.email, data.token, data.type, data.status);
     }
     // Creates an object given the data
     toObject(): any {
-        return { email: this.email, type: this.type, confirmed: this.confirmed };
+        return { email: this.email, type: this.type, status: this.status };
     }
     // Check if it is empty user
     isEmpty(): boolean {

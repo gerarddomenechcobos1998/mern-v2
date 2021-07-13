@@ -38,7 +38,7 @@ const LoginScreen = ({ navigation }: Props) => {
         userTmp.password = password; // se envia en claor, añadir certificado SSL
         let res:any;
         try{
-            res = await apiCaller.call('/user/validate','POST', userTmp);
+            res = await apiCaller.call('/user/login','POST', userTmp);
             await Storage.write('user', res);
             const storedUser = await Storage.read('user');
             setUser(User.prototype.load(storedUser));

@@ -1,17 +1,22 @@
 import Settings from './Settings';
+import User from '../models/user';
 
 class ApiCaller {
     apiUrl: string;
-    constructor( apiUrl?: string) {
+    token: string;
+    constructor( token?: string, apiUrl?: string) {
         this.apiUrl = apiUrl ? apiUrl : Settings.getApiURL() 
+        this.token = token ? token:"";
     }
 
-    async call(url:string, method:string, params?:object) : Promise<any>{ 
+    async call(url:string, method:string, params?:object) : Promise<any>{  
         var fetchParams:any = {
             method: method,
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer '+this.token
             }
+            
         }
 
         if(params) {

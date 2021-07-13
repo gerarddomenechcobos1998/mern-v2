@@ -5,6 +5,10 @@ import { Navigation } from '../types';
 import { theme } from '../core/theme';
 import ApiCaller from '../core/ApiCaller';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Settings from '../core/Settings';
+import User from '../models/user';
+import { useContext } from 'react';
+import { UserContext } from '../context/user/UserState';
 
 type Props = {
   navigation: any;
@@ -14,7 +18,14 @@ const HomeScreen = ({ navigation }: Props) => {
   const [activites,setActivities] = useState<any>();
   const [deleteId, setDeleteId] = useState<string>();
   const [dialogVisible, setDialogVisible] = useState<boolean>(false);
-  var apiCaller = new ApiCaller();
+  const {user} = useContext(UserContext);
+  const getUser = async ()=>{
+    const user = await Settings.getCurrentUser();
+    return user;
+  }
+  //let currentUser:User = getUser();
+  //console.log(currentUser);
+  var apiCaller = new ApiCaller(user.token);
 
   const readArticles = async ()=>{
     const dataRes = await apiCaller.call('/activity', 'GET');  
@@ -83,6 +94,12 @@ const HomeScreen = ({ navigation }: Props) => {
           small
           icon="plus"
           onPress={() => navigation.navigate('create')}
+        />
+         <FAB
+          style={{backgroundColor:'red'}}
+          small
+          icon="plus"
+          onPress={async() => await apiCaller.call('/test', 'GET')}
         />
       </View>
       </View>

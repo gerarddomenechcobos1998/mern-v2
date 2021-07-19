@@ -567,5 +567,35 @@
                 "file": "/data/node_modules/node-red-contrib-jwt/jwt.js"
             }
         }
+    },
+    "node-red-contrib-mailchimp": {
+        "name": "node-red-contrib-mailchimp",
+        "version": "1.0.6",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "mailchimp-list": {
+                "name": "mailchimp-list",
+                "types": [
+                    "mailchimp-list"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mailchimp",
+                "file": "/data/node_modules/node-red-contrib-mailchimp/mailchimp-list.js"
+            },
+            "mailchimp-config": {
+                "name": "mailchimp-config",
+                "types": [
+                    "mailchimp-config"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mailchimp",
+                "file": "/data/node_modules/node-red-contrib-mailchimp/mailchimp-config.js"
+            }
+        }
     }
 }

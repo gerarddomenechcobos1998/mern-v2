@@ -1,5 +1,6 @@
 Hacer en este orden:
 1 - Access the endpoints via API CALLER and JWT TOKEN (AuthHeader - barer)
+1' - Check if Read db is working well :) 
 2 - Llamadas modelos con ApiCaller (opcional)
 3 - Recuperar password (Mandrill o mailgun)
 4 - añadir certificado ssl (https) ya que las password se envian en claro

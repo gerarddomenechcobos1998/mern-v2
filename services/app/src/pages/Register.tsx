@@ -6,7 +6,7 @@ import ApiCaller from '../core/ApiCaller';
 import { CommonActions } from '@react-navigation/native';
 
 type Props = {
-  navigation: Navigation;
+  navigation: any;
 };
 
 const RegisterScreen = ({ navigation }: Props) => {

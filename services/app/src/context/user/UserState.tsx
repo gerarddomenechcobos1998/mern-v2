@@ -11,7 +11,10 @@ var initialState = {
 // create new context and assing the initial state
 export const UserContext = createContext(initialState);
 // create a provider
-export const UserProvider = ({ children }) => {
+type Props = {
+  children: any;
+}
+export const UserProvider = ({ children }:Props) => {
 
   const [state, dispatch] = useReducer(userReducer, initialState);
 

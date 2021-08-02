@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState, useContext} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerContent } from './components/DrawerContent';
@@ -6,7 +6,9 @@ import StackNavigator from './components/StackNavigator';
 import { Platform, View } from 'react-native'
 import * as Linking from 'expo-linking';
 import { useFonts } from 'expo-font';
-
+import AppLoading from 'expo-app-loading';
+import Storage from '../src/core/Settings';
+import {UserContext} from '../src/context/user/UserState';
 
 const Drawer = createDrawerNavigator();
 
@@ -65,11 +67,25 @@ export default function App() {
 		'Archivo-Medium': require('./assets/fonts/Archivo-Medium.ttf'),
 		'Archivo-Regular': require('./assets/fonts/Archivo-Regular.ttf'),
 	  });
+	const [isReady, setReady] = useState(false);
+	const { setUser} = useContext(UserContext)
 
+	const  _isUserReaded = async () => {
+		const user = await Storage.getCurrentUser();
+		setUser(user);
+	}
+	
 	if (!fontsLoaded) {
 		return <View></View>;
 	} else {
 		return (
+			isReady === false ?
+			<AppLoading
+			startAsync={_isUserReaded}
+			onFinish={() => setReady(true)}
+			onError={console.warn}
+			/>
+			:
 			<View style={{flex:1}}>
 				<NavigationContainer linking={linking}>
 					<Drawer.Navigator overlayColor="0" drawerType="slide" drawerPosition='right'

@@ -1,17 +1,22 @@
-import * as React from 'react';
+import React, {useContext} from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen, ViewScreen, UpdateScreen, CreateScreen, RegisterScreen, LoginScreen, ForgotPasswordScreen } from '../pages';
 import Header from './Header';
 import { Navigation } from '../types';
+import {UserContext} from '../context/user/UserState';
 
 const StackNavigator = () => {
     // state variables
     const [headerBorder, setHeaderBorder] = React.useState(0);
     const [headerStyle, setHeaderStyle] = React.useState('default');
+    const { user} = useContext(UserContext)
     // Create stack navigator
     const Stack = createStackNavigator();                       
     // returns the name of the screen that is first route
     const getInitialRoute = () => {
+        if(user.email){
+            return "home";
+        }
         return "login";
     }
  

@@ -9,9 +9,11 @@
 ### RUN program
 1. Go to ./services/app folder
 2. Run `npm install`
-3. Go to ./stacks folder
-4. Run `docker-compose build`
-5. Run `docker-compose up`
+3. Go to ./services/nodered folder
+4. Run `npm install`
+5. Go to ./stacks folder
+6. Run `docker-compose build`
+7. Run `docker-compose up`
 
 ### Make calls to API
 The mongoExpress is running at** port 8081**

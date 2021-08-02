@@ -1,7 +1,7 @@
 {
     "node-red": {
         "name": "node-red",
-        "version": "1.3.5",
+        "version": "2.0.5",
         "local": false,
         "user": false,
         "nodes": {
@@ -181,6 +181,17 @@
                 "user": false,
                 "module": "node-red",
                 "file": "/usr/src/node-red/node_modules/@node-red/nodes/core/function/90-exec.js"
+            },
+            "rbe": {
+                "name": "rbe",
+                "types": [
+                    "rbe"
+                ],
+                "enabled": true,
+                "local": false,
+                "user": false,
+                "module": "node-red",
+                "file": "/usr/src/node-red/node_modules/@node-red/nodes/core/function/rbe.js"
             },
             "tls": {
                 "name": "tls",
@@ -595,6 +606,27 @@
                 "user": false,
                 "module": "node-red-contrib-mailchimp",
                 "file": "/data/node_modules/node-red-contrib-mailchimp/mailchimp-config.js"
+            }
+        }
+    },
+    "node-red-node-mongodb": {
+        "name": "node-red-node-mongodb",
+        "version": "0.2.5",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "mongo": {
+                "name": "mongo",
+                "types": [
+                    "mongodb",
+                    "mongodb out",
+                    "mongodb in"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-node-mongodb",
+                "file": "/data/node_modules/node-red-node-mongodb/66-mongodb.js"
             }
         }
     }

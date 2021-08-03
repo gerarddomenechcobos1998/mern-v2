@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo, useState, useEffect, useRef } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { Card, Title, Paragraph, Portal, Dialog, Button, FAB } from 'react-native-paper';
 import { Navigation } from '../types';
@@ -19,6 +19,7 @@ const HomeScreen = ({ navigation }: Props) => {
   const {user} = useContext(UserContext);
 
   var apiCaller = new ApiCaller(user.token);
+  const refRBSheet = useRef();
 
   const readArticles = async ()=>{
     const dataRes = await apiCaller.call('/activity', 'GET');  
@@ -92,7 +93,6 @@ const HomeScreen = ({ navigation }: Props) => {
           style={{backgroundColor:'red'}}
           small
           icon="plus"
-          onPress={async() => await apiCaller.call('/test', 'GET')}
         />
       </View>
       </View>

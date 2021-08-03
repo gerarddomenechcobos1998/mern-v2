@@ -2,22 +2,20 @@ import React, {useContext} from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen, ViewScreen, UpdateScreen, CreateScreen, RegisterScreen, LoginScreen, ForgotPasswordScreen } from '../pages';
 import Header from './Header';
-import { Navigation } from '../types';
 import {UserContext} from '../context/user/UserState';
 
 const StackNavigator = () => {
     // state variables
-    const [headerBorder, setHeaderBorder] = React.useState(0);
-    const [headerStyle, setHeaderStyle] = React.useState('default');
-    const { user} = useContext(UserContext)
+    const {user} = useContext(UserContext)
     // Create stack navigator
     const Stack = createStackNavigator();                       
-    // returns the name of the screen that is first route
+
+    const isLoggedIn = () => {
+        return user.email?true:false;
+    }
+
     const getInitialRoute = () => {
-        if(user.email){
-            return "home";
-        }
-        return "login";
+        return isLoggedIn()?"home":"login";
     }
  
 
@@ -38,13 +36,25 @@ const StackNavigator = () => {
                 }
             }}
         >
-            <Stack.Screen name="home" component={HomeScreen} />
-            <Stack.Screen name="update" component={UpdateScreen} />
-            <Stack.Screen name="view" component={ViewScreen} />
-            <Stack.Screen name="create" component={CreateScreen} />
-            <Stack.Screen name="register" component={RegisterScreen} />
-            <Stack.Screen name="login" component={LoginScreen} />
-            <Stack.Screen name="forgotPassword" component={ForgotPasswordScreen} />
+            {
+                isLoggedIn()?<Stack.Screen name="home" component={HomeScreen} />:null
+            }
+            {
+                isLoggedIn()?<Stack.Screen name="update" component={UpdateScreen} />:null
+            }
+            {
+                isLoggedIn()?<Stack.Screen name="view" component={ViewScreen} />:null
+            }
+            {
+                isLoggedIn()?<Stack.Screen name="create" component={CreateScreen} />:null
+            }
+            {  
+                <>
+                    <Stack.Screen name="register" component={RegisterScreen} />
+                    <Stack.Screen name="login" component={LoginScreen} />
+                    <Stack.Screen name="forgotPassword" component={ForgotPasswordScreen} />
+                </>
+            }
         </Stack.Navigator>
     );
 };

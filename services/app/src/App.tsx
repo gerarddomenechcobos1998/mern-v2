@@ -88,8 +88,11 @@ export default function App() {
 			:
 			<View style={{flex:1}}>
 				<NavigationContainer linking={linking}>
-					<Drawer.Navigator overlayColor="0" drawerType="slide" drawerPosition='right'
-						// drawerContent={<DrawerContent/>}
+					<Drawer.Navigator 
+						overlayColor="transparent" 
+						drawerType="slide" 
+						drawerPosition='right'
+						drawerContent={DrawerContent}
 					>
 						<Drawer.Screen name="app" component={StackNavigator} />
 					</Drawer.Navigator>

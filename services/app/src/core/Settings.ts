@@ -7,8 +7,8 @@ const getCurrentUser = async (): Promise<User> => {
     const currentUser = User.prototype.load(data);
     return currentUser;
 }
-const logout = async () =>{
-    await Storage.remove('user')
+const logout = async (): Promise<void> =>{
+    await Storage.remove('user');
 }
 var Settings = {
     getApiURL: () => {

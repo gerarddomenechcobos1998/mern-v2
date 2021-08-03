@@ -1,16 +1,19 @@
-import React, { memo } from 'react';
+import React, { memo, useContext } from 'react';
 import {StyleSheet, View } from 'react-native';
 import { Title, Drawer } from 'react-native-paper';
 import { DrawerItem } from '@react-navigation/drawer';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Settings from '../core/Settings';
 import { CommonActions } from '@react-navigation/native';
+import {UserContext} from '../context/user/UserState';
 
 type Props = {
   navigation:any;
 };
 
 const Menu = ({navigation}: Props) => {
+
+  const {user} = useContext(UserContext);
 
   const resetStackNavigator = (routeName:string) => {
     const resetAction = CommonActions.reset({
@@ -30,20 +33,35 @@ const Menu = ({navigation}: Props) => {
   return(
     <View style={styles.drawerContent}>
         <View style={styles.userInfoSection}>
-            <Title style={styles.title}>Menu Title</Title>
+            <Title style={styles.title}>{user.email}</Title>
         </View>
         <Drawer.Section style={styles.drawerSection}>
+          {
+            user.token?
             <DrawerItem
-                icon={(data:any) => (
-                <MaterialCommunityIcons
-                    name="logout"
-                    color={data.color}
-                    size={data.size}
-                />
-                )}
-                label="Cerrar sesión"
-                onPress={() => _logOut()}
+              icon={(data:any) => (
+              <MaterialCommunityIcons
+                  name="logout"
+                  color={data.color}
+                  size={data.size}
+              />
+              )}
+              label="Cerrar sesión"
+              onPress={() => _logOut()}
             />
+            :
+            <DrawerItem
+              icon={(data:any) => (
+              <MaterialCommunityIcons
+                  name="login"
+                  color={data.color}
+                  size={data.size}
+              />
+              )}
+              label="Login"
+              onPress={() => resetStackNavigator('login')}
+            />
+          }
         </Drawer.Section>
     </View>
   );

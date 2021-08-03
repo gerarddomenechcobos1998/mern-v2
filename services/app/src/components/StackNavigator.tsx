@@ -6,7 +6,7 @@ import {UserContext} from '../context/user/UserState';
 
 const StackNavigator = () => {
     // state variables
-    const {user} = useContext(UserContext)
+    const {user} = useContext(UserContext);
     // Create stack navigator
     const Stack = createStackNavigator();                       
 
@@ -19,10 +19,9 @@ const StackNavigator = () => {
     }
  
 
-    const getHeader = ( navigation: any, previous:any ) => {
-        const title = "Titulo de la app";   
+    const getHeader = ( navigation: any, previous:any ) => { 
         return (
-            <Header navigation={navigation} title={title} previous={previous}></Header>
+            <Header navigation={navigation} previous={previous}></Header>
         );
     }
 

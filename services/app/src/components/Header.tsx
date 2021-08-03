@@ -1,17 +1,15 @@
-import { DrawerNavigationProp } from '@react-navigation/drawer';
 import React, { memo } from 'react';
 import { Appbar } from 'react-native-paper';
 import {theme} from '../core/theme';
-import { Navigation } from '../types';
+
 
 type Props = {
     previous: any;
-    title: string;
     navigation: any;
     headerBorder?: any;
 };
  
-const Header = ({ title, previous, navigation, headerBorder}: Props) => {
+const Header = ({ previous, navigation, headerBorder}: Props) => {
     const menuButton = () => {
         return <Appbar.Action icon="menu" onPress={() => {
             navigation.openDrawer();
@@ -27,7 +25,7 @@ const Header = ({ title, previous, navigation, headerBorder}: Props) => {
         }
         
         <Appbar.Content
-                title={title}
+                title={'Hello from app'}
                 titleStyle={{
                     fontSize: 18,
                     fontWeight: 'bold',

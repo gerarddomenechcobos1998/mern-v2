@@ -5,8 +5,6 @@ import { Navigation } from '../types';
 import { theme } from '../core/theme';
 import ApiCaller from '../core/ApiCaller';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import Settings from '../core/Settings';
-import User from '../models/user';
 import { useContext } from 'react';
 import { UserContext } from '../context/user/UserState';
 
@@ -19,12 +17,7 @@ const HomeScreen = ({ navigation }: Props) => {
   const [deleteId, setDeleteId] = useState<string>();
   const [dialogVisible, setDialogVisible] = useState<boolean>(false);
   const {user} = useContext(UserContext);
-  const getUser = async ()=>{
-    const user = await Settings.getCurrentUser();
-    return user;
-  }
-  //let currentUser:User = getUser();
-  //console.log(currentUser);
+
   var apiCaller = new ApiCaller(user.token);
 
   const readArticles = async ()=>{

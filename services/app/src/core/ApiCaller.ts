@@ -1,5 +1,4 @@
 import Settings from './Settings';
-import User from '../models/user';
 
 class ApiCaller {
     apiUrl: string;

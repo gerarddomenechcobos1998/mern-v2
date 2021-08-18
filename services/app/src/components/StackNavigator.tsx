@@ -1,17 +1,17 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen, ViewScreen, UpdateScreen, CreateScreen, RegisterScreen, LoginScreen, ForgotPasswordScreen } from '../pages';
 import Header from './Header';
-import {UserContext} from '../context/user/UserState';
+import { useAppStore } from '../context/appStore';
 
 const StackNavigator = () => {
     // state variables
-    const {user} = useContext(UserContext);
+    const {session} = useAppStore();
     // Create stack navigator
     const Stack = createStackNavigator();                       
 
     const isLoggedIn = () => {
-        return user.email?true:false;
+        return session.loggedIn?true:false;
     }
 
     const getInitialRoute = () => {

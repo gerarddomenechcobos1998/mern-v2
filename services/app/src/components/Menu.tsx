@@ -5,7 +5,7 @@ import { DrawerItem } from '@react-navigation/drawer';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Settings from '../core/Settings';
 import { CommonActions } from '@react-navigation/native';
-import {UserContext} from '../context/user/UserState';
+import { useAppStore } from '../context/appStore';
 
 type Props = {
   navigation:any;
@@ -13,8 +13,7 @@ type Props = {
 
 const Menu = ({navigation}: Props) => {
 
-  const {user} = useContext(UserContext);
-
+  const {session} = useAppStore()
   const resetStackNavigator = (routeName:string) => {
     const resetAction = CommonActions.reset({
         index: 1,
@@ -33,11 +32,11 @@ const Menu = ({navigation}: Props) => {
   return(
     <View style={styles.drawerContent}>
         <View style={styles.userInfoSection}>
-            <Title style={styles.title}>{user.email}</Title>
+            <Title style={styles.title}>{session.userInfo.email}</Title>
         </View>
         <Drawer.Section style={styles.drawerSection}>
           {
-            user.token?
+            session.userInfo.token?
             <DrawerItem
               icon={(data:any) => (
               <MaterialCommunityIcons

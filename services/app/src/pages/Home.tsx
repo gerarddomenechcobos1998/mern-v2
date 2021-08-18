@@ -5,8 +5,7 @@ import { Navigation } from '../types';
 import { theme } from '../core/theme';
 import ApiCaller from '../core/ApiCaller';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useContext } from 'react';
-import { UserContext } from '../context/user/UserState';
+import { useAppStore } from '../context/appStore';
 
 type Props = {
   navigation: any;
@@ -16,10 +15,9 @@ const HomeScreen = ({ navigation }: Props) => {
   const [activites,setActivities] = useState<any>();
   const [deleteId, setDeleteId] = useState<string>();
   const [dialogVisible, setDialogVisible] = useState<boolean>(false);
-  const {user} = useContext(UserContext);
+  const {session} = useAppStore();
 
-  var apiCaller = new ApiCaller(user.token);
-  const refRBSheet = useRef();
+  var apiCaller = new ApiCaller(session.userInfo.token);
 
   const readArticles = async ()=>{
     const dataRes = await apiCaller.call('/activity', 'GET');  

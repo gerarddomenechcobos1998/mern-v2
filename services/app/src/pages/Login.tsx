@@ -4,8 +4,8 @@ import { Button, TextInput } from 'react-native-paper';
 import ApiCaller from '../core/ApiCaller';
 import { CommonActions } from '@react-navigation/native';
 import Storage from '../core/Storage';
-import {UserContext} from '../context/user/UserState';
 import User from '../models/user';
+import { useAppStore } from '../context/appStore';
 
 type Props = {
   navigation: any;
@@ -15,7 +15,7 @@ const LoginScreen = ({ navigation }: Props) => {
     const [ email, setEmail ] = useState<string>('');
     const [ password, setPassword ] = useState<string>('');
     const [ visible, setVisible ] = useState<boolean>(false);
-    const { setUser} = useContext(UserContext)
+    const {setProfile, setSession} = useAppStore();
 
     var apiCaller = new ApiCaller();
 
@@ -33,15 +33,16 @@ const LoginScreen = ({ navigation }: Props) => {
     }
     const onLogginPress = async () => {
         // Llamar a la api y ver si las contraseñas coinciden
-        let userTmp: any = {};
-        userTmp.email = email;
-        userTmp.password = password; // se envia en claor, añadir certificado SSL
+        let credentials: any = {};
+        credentials.email = email;
+        credentials.password = password; // se envia en claor, añadir certificado SSL
         let res:any;
         try{
-            res = await apiCaller.call('/user/login','POST', userTmp);
+            res = await apiCaller.call('/user/login','POST', credentials);
             await Storage.write('user', res);
             const storedUser = await Storage.read('user');
-            setUser(User.prototype.load(storedUser));
+            const userInfo = User.prototype.load(storedUser);
+            setSession(userInfo);
             resetStackNavigator('home'); 
         }catch(e){
             console.error(e);

@@ -4,9 +4,9 @@ class User {
     email: string;
     token: string;
     type: string;
-    status: boolean;
+    status: string;
     
-    constructor(email: string, token: string, type: string, status: boolean) {
+    constructor(email: string, token: string, type: string, status: string) {
         this.email = email;
         this.token = token;
         this.type = type;

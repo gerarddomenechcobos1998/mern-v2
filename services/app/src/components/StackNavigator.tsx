@@ -1,14 +1,6 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import {
-  HomeScreen,
-  ViewScreen,
-  UpdateScreen,
-  CreateScreen,
-  RegisterScreen,
-  LoginScreen,
-  ForgotPasswordScreen,
-} from "../pages";
+import { RegisterScreen, LoginScreen, ForgotPasswordScreen} from "../pages";
 import Header from "./Header";
 import { useAppStore } from "../context/appStore";
 import Screens from "../app/Screens";

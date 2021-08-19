@@ -46,19 +46,6 @@ const StackNavigator = () => {
         },
       }}
     >
-      {/* {isLoggedIn() ? (
-        <Stack.Screen name="home" component={HomeScreen} />
-      ) : null}
-      {isLoggedIn() ? (
-        <Stack.Screen name="update" component={UpdateScreen} />
-      ) : null}
-      {isLoggedIn() ? (
-        <Stack.Screen name="view" component={ViewScreen} />
-      ) : null}
-      {isLoggedIn() ? (
-        <Stack.Screen name="create" component={CreateScreen} />
-      ) : null}
-      */}
       {!isLoggedIn() ? (
         <Stack.Screen name="login" component={LoginScreen} />
       ) : null} 

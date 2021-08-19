@@ -1,5 +1,5 @@
 Hacer en este orden:
-1 - stackNavigator que funcione en la home en vez de al login (Mirar que pasa cuando logeamos que recibimos), falta generar screens
+1 - falta generar screens
 1.1 - Nodered caja Auth no funciona bien del todo ahahahah
 2 - Llamadas modelos con ApiCaller (opcional)
 3 - Recuperar password (Mandrill o mailgun) tengo que configurar el dns!!!!

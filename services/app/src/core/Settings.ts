@@ -3,8 +3,7 @@ import User from '../models/user';
 import Storage from './Storage';
 
 const getCurrentUser = async (): Promise<User> => {
-    const data = await Storage.read('user');
-    const currentUser = User.prototype.load(data);
+    const currentUser = await Storage.read('user');
     return currentUser;
 }
 const logout = async (): Promise<void> =>{

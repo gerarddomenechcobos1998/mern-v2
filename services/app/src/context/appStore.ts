@@ -22,6 +22,9 @@ export const useAppStore = create<AppStoreData>((set) => ({
         draft.profile = payload;
     })),
     setSession: (payload:User) => set(produce((draft:AppStoreData) => {
+        if(!payload){
+            payload = new User('', '', 'guest', "confirmed");
+        }
         draft.session = {
             userInfo: payload,
             ready: true,
@@ -39,5 +42,5 @@ export const useAppStore = create<AppStoreData>((set) => ({
                 };
             }))
         });
-    } 
+    }
 }));

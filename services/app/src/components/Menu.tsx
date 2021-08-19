@@ -13,7 +13,7 @@ type Props = {
 
 const Menu = ({navigation}: Props) => {
 
-  const {session} = useAppStore()
+  const {session,logout } = useAppStore();
   const resetStackNavigator = (routeName:string) => {
     const resetAction = CommonActions.reset({
         index: 1,
@@ -22,8 +22,8 @@ const Menu = ({navigation}: Props) => {
     navigation.dispatch(resetAction);
   }
 
-  const _logOut = async ()=>{
-    await Settings.logout();
+  const _logOut = ()=>{
+    logout();
     // Error with this navigation, import from parent
     navigation.closeDrawer();
     resetStackNavigator('login');

@@ -7,22 +7,22 @@ const Screens = [
     {
         name:'home',
         component: HomeScreen,
-        requierAuth: "user"
+        requierAuthLevel: ["user"]
     },
     {
         name: "create",
         component: CreateScreen,
-        requireAuth: "user"
+        requierAuthLevel: ["user"]
     },
     {
         name: "view",
         component: ViewScreen,
-        requireAuth: "user"
+        requierAuthLevel: ["user"]
     },
     {
         name: "update",
         component: UpdateScreen,
-        requireAuth:"user"
+        requierAuthLevel:["user"]
     }
 ]
 export default Screens;

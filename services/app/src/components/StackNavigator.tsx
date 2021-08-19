@@ -11,6 +11,7 @@ import {
 } from "../pages";
 import Header from "./Header";
 import { useAppStore } from "../context/appStore";
+import Screens from "../app/Screens";
 
 const StackNavigator = () => {
   // state variables
@@ -45,7 +46,7 @@ const StackNavigator = () => {
         },
       }}
     >
-      {isLoggedIn() ? (
+      {/* {isLoggedIn() ? (
         <Stack.Screen name="home" component={HomeScreen} />
       ) : null}
       {isLoggedIn() ? (
@@ -57,9 +58,17 @@ const StackNavigator = () => {
       {isLoggedIn() ? (
         <Stack.Screen name="create" component={CreateScreen} />
       ) : null}
+      */}
       {!isLoggedIn() ? (
         <Stack.Screen name="login" component={LoginScreen} />
-      ) : null}
+      ) : null} 
+      {
+        isLoggedIn() ?
+          Screens.map((screen)=>{
+           return(<Stack.Screen name={screen.name} component={screen.component} />)
+          })
+          :null
+      }
       <Stack.Screen name="register" component={RegisterScreen} />
       <Stack.Screen name="forgotPassword" component={ForgotPasswordScreen} />
     </Stack.Navigator>

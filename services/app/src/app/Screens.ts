@@ -3,7 +3,7 @@ import ViewScreen from '../pages/View';
 import HomeScreen from '../pages/Home';
 import UpdateScreen from '../pages/Update';
 
-export const Screens = [
+const Screens = [
     {
         name:'home',
         component: HomeScreen,
@@ -25,3 +25,4 @@ export const Screens = [
         requireAuth:"user"
     }
 ]
+export default Screens;

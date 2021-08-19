@@ -1,12 +1,12 @@
 version: '3.3'
 
 services:
-  react_native:
+  app:
     build:
       context: ../services/app/
       args:
         - NODE_ENV=development
-    container_name: react_native_app
+    container_name: app
     environment:
       - NODE_ENV=development
     tty: true
@@ -49,13 +49,17 @@ services:
       - db
     volumes:
       - '../services/node-red:/data'
-    # webserver:
-    #   image: nginx
-    #   depends_on: 
-    #     - mongo-express
-    #   ports:
-    #     - '80:80'
-    #   volumes:
-    #     - ./nginx:/etc/nginx/conf.d
-    #     - ./data/public:/data
+
+  webserver:
+    container_name: "webserver"
+    image: nginx
+    depends_on: 
+      - mongo-express
+      - app
+      - node-red
+      - db
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
           

@@ -47,7 +47,7 @@ const Header = ({ previous, navigation, headerBorder}: Props) => {
             closeOnPressMask={false}
             openDuration={250}
             height={400}
-            closeOnPressMask={true}
+            animationType={'fade'}
             customStyles={{
                 wrapper: {
                     backgroundColor: "rgba(0,0,0,0.1)"

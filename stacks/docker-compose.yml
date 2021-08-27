@@ -41,6 +41,7 @@ services:
 
   node-red:
     image: nodered/node-red
+    container_name: nodered
     environment:
       - TZ=Europe/Madrid
     ports:

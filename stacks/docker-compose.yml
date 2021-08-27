@@ -11,13 +11,13 @@ services:
       - NODE_ENV=development
     tty: true
     ports:
+      - '19006:19006'
       - '19000:19000'
       - '19001:19001'
       - '19002:19002'
       - '19003:19003'
       - '19004:19004'
       - '19005:19005'
-      - '19006:19006'
     volumes:  
       - ../services/app:/app
     healthcheck:
@@ -50,34 +50,16 @@ services:
     volumes:
       - '../services/node-red:/data'
 
-  traefik:
-    container_name: "traefik"
-    image: traefik:latest
+  webserver:
+    container_name: "webserver"
+    image: nginx:latest
     depends_on: 
       - mongo-express
       - app
       - node-red
       - db
-    command:
-      # Log Settings
-      - '--log.level=DEBUG'
-      # API Settings
-      - '--api.insecure=true'
-      - '--api.dashboard=true'
-      - '--api.debug=true'
-      # Provider
-      - '--providers.docker=true' # Enable Docker as the provider for traefik
-      - '--providers.file.filename=/config/dynamic.yaml' # Reffering to dynamic configuration file
-    labels:
-    # Labels define the behaviour and the roules of the traefic proxy for this container
-      - 'traefik.enable=true' # Enable traefik to see its Dashboard
-      #- 'traefik.http.routers.api.rule=Host('mydomain.exmaple')' #Setting a Host Domain for dashboard
-      - 'traefik.http.routers.api.service=api@internal' # Enabling the api to be a service to access
-
     ports:
-      - '80:80' # The HTTP port
-      - '8080:8080' # The Web UI (enabled by --api.insecure=true)
+      - '80:80'
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
-      - ./config/dynamic.yaml:/dynamic.yaml
-          
+      - ./nginx:/etc/nginx/conf.d
+

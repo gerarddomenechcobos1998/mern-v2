@@ -1,9 +1,9 @@
 Hacer en este orden:
-1 - falta generar screens
-1.1 - Nodered caja Auth no funciona bien del todo ahahahah
-2 - Llamadas modelos con ApiCaller (opcional)
-6 - Añadir componentes (MAP, calendar, searchBar)
-7 - Reconfigurar estrucutra del proyecto.
+1 - Falta poder navegar con las rutas sin seguir un flow 
+2 - Screens deben poder invocarse en el stackNavigator
+3 - Nodered caja Auth no funciona bien del todo
+4 - Generar APIs para cada modelo
+6 - Añadir componentes (MAP, calendar, searchBar, etc.)
 
 EXTRA - Recuperar password (Mandrill o mailgun) tengo que configurar el dns!!!!
 EXTRA - Renovacion de los tokens JWT cada 15 minutos

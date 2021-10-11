@@ -1,0 +1,912 @@
+Attaching to browserless, stacks_db_1, app, stacks_mongo-express_1, nodered-scrappers, nodered, webserver
+[36mbrowserless           |[0m 2021-10-11T10:46:43.572Z browserless:server {
+[36mbrowserless           |[0m   CONNECTION_TIMEOUT: 60000,
+[36mbrowserless           |[0m   MAX_CONCURRENT_SESSIONS: 10,
+[36mbrowserless           |[0m   QUEUE_LENGTH: 10,
+[36mbrowserless           |[0m   SINGLE_RUN: false,
+[36mbrowserless           |[0m   CHROME_REFRESH_TIME: 1800000,
+[36mbrowserless           |[0m   KEEP_ALIVE: false,
+[36mbrowserless           |[0m   DEFAULT_BLOCK_ADS: false,
+[36mbrowserless           |[0m   DEFAULT_HEADLESS: true,
+[36mbrowserless           |[0m   DEFAULT_LAUNCH_ARGS: [],
+[36mbrowserless           |[0m   DEFAULT_IGNORE_DEFAULT_ARGS: false,
+[36mbrowserless           |[0m   DEFAULT_IGNORE_HTTPS_ERRORS: false,
+[36mbrowserless           |[0m   DEFAULT_DUMPIO: false,
+[36mbrowserless           |[0m   DEFAULT_STEALTH: false,
+[36mbrowserless           |[0m   DEFAULT_USER_DATA_DIR: undefined,
+[36mbrowserless           |[0m   PREBOOT_CHROME: false,
+[36mbrowserless           |[0m   DEBUG: 'browserless*',
+[36mbrowserless           |[0m   DISABLED_FEATURES: [],
+[36mbrowserless           |[0m   ENABLE_CORS: false,
+[36mbrowserless           |[0m   ENABLE_API_GET: false,
+[36mbrowserless           |[0m   TOKEN: null,
+[36mbrowserless           |[0m   ENABLE_HEAP_DUMP: false,
+[36mbrowserless           |[0m   ALLOW_FILE_PROTOCOL: false,
+[36mbrowserless           |[0m   DISABLE_AUTO_SET_DOWNLOAD_BEHAVIOR: false,
+[36mbrowserless           |[0m   FUNCTION_BUILT_INS: [ 'url' ],
+[36mbrowserless           |[0m   FUNCTION_ENV_VARS: [],
+[36mbrowserless           |[0m   FUNCTION_ENABLE_INCOGNITO_MODE: false,
+[36mbrowserless           |[0m   FUNCTION_EXTERNALS: [ 'lighthouse', 'node-pdftk', 'sharp' ],
+[36mbrowserless           |[0m   WORKSPACE_DIR: '/usr/src/app/workspace',
+[36mbrowserless           |[0m   WORKSPACE_DELETE_EXPIRED: false,
+[36mbrowserless           |[0m   WORKSPACE_EXPIRE_DAYS: 30,
+[36mbrowserless           |[0m   FAILED_HEALTH_URL: null,
+[36mbrowserless           |[0m   QUEUE_ALERT_URL: null,
+[36mbrowserless           |[0m   REJECT_ALERT_URL: null,
+[36mbrowserless           |[0m   TIMEOUT_ALERT_URL: null,
+[36mbrowserless           |[0m   ERROR_ALERT_URL: null,
+[36mbrowserless           |[0m   SESSION_CHECK_FAIL_URL: null,
+[36mbrowserless           |[0m   PRE_REQUEST_HEALTH_CHECK: false,
+[36mbrowserless           |[0m   EXIT_ON_HEALTH_FAILURE: false,
+[36mbrowserless           |[0m   MAX_CPU_PERCENT: 99,
+[36mbrowserless           |[0m   MAX_MEMORY_PERCENT: 99,
+[36mbrowserless           |[0m   METRICS_JSON_PATH: null,
+[36mbrowserless           |[0m   HOST: '0.0.0.0',
+[36mbrowserless           |[0m   PORT: 3000,
+[36mbrowserless           |[0m   SOCKET_CLOSE_METHOD: 'http',
+[36mbrowserless           |[0m   PROXY_URL: undefined,
+[36mbrowserless           |[0m   MAX_PAYLOAD_SIZE: '5mb'
+[36mbrowserless           |[0m } Final configuration
+[32mapp                   |[0m 
+[32mapp                   |[0m > web
+[32mapp                   |[0m > expo start --web
+[32mapp                   |[0m 
+[32mapp                   |[0m [33m[32m┌─────────────────────────────────────────────────────────────────────────┐[39m[33m[39m
+[32mapp                   |[0m [33m[32m│[39m[33m                                                                         [32m│[39m[33m[39m
+[32mapp                   |[0m [33m[32m│[39m[33m   [32mThere is a new version of expo-cli available (4.12.1).[39m[33m                [32m│[39m[33m[39m
+[32mapp                   |[0m [33m[32m│[39m[33m   [32mYou are currently using expo-cli 4.11.0[39m[33m                               [32m│[39m[33m[39m
+[32mapp                   |[0m [33m[32m│[39m[33m   [32mInstall expo-cli globally using the package manager of your choice;[39m[33m   [32m│[39m[33m[39m
+[32mapp                   |[0m [33m[32m│[39m[33m   [32mfor example: `npm install -g expo-cli` to get the latest version[39m[33m      [32m│[39m[33m[39m
+[32mapp                   |[0m [33m[32m│[39m[33m                                                                         [32m│[39m[33m[39m
+[32mapp                   |[0m [33m[32m└─────────────────────────────────────────────────────────────────────────┘[39m[33m[39m
+[32mapp                   |[0m [90mStarting project at /app[39m
+[32mapp                   |[0m Developer tools running on [4mhttp://localhost:19002[24m
+[32mapp                   |[0m Opening developer tools in the browser...
+[35mmongo-express_1       |[0m Welcome to mongo-express
+[35mmongo-express_1       |[0m ------------------------
+[35mmongo-express_1       |[0m 
+[35mmongo-express_1       |[0m 
+[35mmongo-express_1       |[0m (node:8) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[35mmongo-express_1       |[0m Mongo Express server listening at http://0.0.0.0:8081
+[35mmongo-express_1       |[0m [31mServer is open to allow connections from anyone (0.0.0.0)[39m
+[35mmongo-express_1       |[0m [31mbasicAuth credentials are "admin:pass", it is recommended you change this in your config.js![39m
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.490+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"thread1","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":13},"outgoing":{"minWireVersion":0,"maxWireVersion":13},"isInternalClient":true}}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.490+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"thread1","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.492+00:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"thread1","msg":"No TransportLayer configured during NetworkInterface startup"}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.493+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"thread1","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.495+00:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"thread1","msg":"No TransportLayer configured during NetworkInterface startup"}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.495+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"thread1","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","ns":"config.tenantMigrationDonors"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.495+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"thread1","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","ns":"config.tenantMigrationRecipients"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.496+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":1,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"7cc582fbfeec"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.496+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"5.0.2","gitVersion":"6d9ec525e78465dcecadcff99cce953d380fedc8","openSSLVersion":"OpenSSL 1.1.1f  31 Mar 2020","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu2004","distarch":"x86_64","target_arch":"x86_64"}}}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.496+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"20.04"}}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.496+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"*"}}}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.499+00:00"},"s":"I",  "c":"STORAGE",  "id":22270,   "ctx":"initandlisten","msg":"Storage engine to use detected by data files","attr":{"dbpath":"/data/db","storageEngine":"wiredTiger"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.499+00:00"},"s":"I",  "c":"STORAGE",  "id":22297,   "ctx":"initandlisten","msg":"Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem","tags":["startupWarnings"]}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:42.499+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=3427M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress,compact_progress],"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.081+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1633949203:81138][1:0x7fa5516b6c80], txn-recover: [WT_VERB_RECOVERY_PROGRESS] Recovering log 73 through 74"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.126+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1633949203:126066][1:0x7fa5516b6c80], txn-recover: [WT_VERB_RECOVERY_PROGRESS] Recovering log 74 through 74"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.201+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1633949203:201531][1:0x7fa5516b6c80], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Main recovery loop: starting at 73/5376 to 74/256"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.306+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1633949203:306752][1:0x7fa5516b6c80], txn-recover: [WT_VERB_RECOVERY_PROGRESS] Recovering log 73 through 74"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.405+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1633949203:405642][1:0x7fa5516b6c80], txn-recover: [WT_VERB_RECOVERY_PROGRESS] Recovering log 74 through 74"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.471+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1633949203:471919][1:0x7fa5516b6c80], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Set global recovery timestamp: (0, 0)"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.472+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1633949203:472028][1:0x7fa5516b6c80], txn-recover: [WT_VERB_RECOVERY | WT_VERB_RECOVERY_PROGRESS] Set global oldest timestamp: (0, 0)"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.474+00:00"},"s":"I",  "c":"STORAGE",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":"[1633949203:474026][1:0x7fa5516b6c80], WT_SESSION.checkpoint: [WT_VERB_CHECKPOINT_PROGRESS] saving checkpoint snapshot min: 1, snapshot max: 1 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 14896"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.490+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":991}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.490+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.494+00:00"},"s":"I",  "c":"STORAGE",  "id":4366408, "ctx":"initandlisten","msg":"No table logging settings modifications are required for existing WiredTiger tables","attr":{"loggingEnabled":true}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.501+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.511+00:00"},"s":"W",  "c":"CONTROL",  "id":22120,   "ctx":"initandlisten","msg":"Access control is not enabled for the database. Read and write access to data and configuration is unrestricted","tags":["startupWarnings"]}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.511+00:00"},"s":"W",  "c":"CONTROL",  "id":22178,   "ctx":"initandlisten","msg":"/sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'","tags":["startupWarnings"]}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.517+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":13},"outgoing":{"minWireVersion":0,"maxWireVersion":13},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":13,"maxWireVersion":13},"outgoing":{"minWireVersion":13,"maxWireVersion":13},"isInternalClient":true}}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.517+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.518+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.520+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/data/db/diagnostic.data"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.529+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/tmp/mongodb-27017.sock"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.529+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"0.0.0.0"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:43.529+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:45.849+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.5:38392","uuid":"65c1be03-5dcf-4be1-98e9-dc633471198d","connectionId":1,"connectionCount":1}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:45.860+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"172.20.0.5:38392","client":"conn1","doc":{"driver":{"name":"nodejs","version":"3.7.0"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.4.72-microsoft-standard-WSL2"},"platform":"'Node.js v12.22.6, LE (legacy)"}}}
+[31mnodered-scrappers     |[0m 
+[31mnodered-scrappers     |[0m > node-red-docker@2.0.5 start /usr/src/node-red
+[31mnodered-scrappers     |[0m > node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS "--userDir" "/data"
+[31mnodered-scrappers     |[0m 
+[31mnodered-scrappers     |[0m internal/fs/utils.js:314
+[31mnodered-scrappers     |[0m     throw err;
+[31mnodered-scrappers     |[0m     ^
+[31mnodered-scrappers     |[0m 
+[31mnodered-scrappers     |[0m Error: EACCES: permission denied, copyfile '/usr/src/node-red/node_modules/node-red/settings.js' -> '/data/settings.js'
+[31mnodered-scrappers     |[0m     at Object.copyFileSync (fs.js:2059:3)
+[31mnodered-scrappers     |[0m     at copyFile (/usr/src/node-red/node_modules/fs-extra/lib/copy-sync/copy-sync.js:70:6)
+[31mnodered-scrappers     |[0m     at onFile (/usr/src/node-red/node_modules/fs-extra/lib/copy-sync/copy-sync.js:56:25)
+[31mnodered-scrappers     |[0m     at getStats (/usr/src/node-red/node_modules/fs-extra/lib/copy-sync/copy-sync.js:48:44)
+[31mnodered-scrappers     |[0m     at handleFilterAndCopy (/usr/src/node-red/node_modules/fs-extra/lib/copy-sync/copy-sync.js:33:10)
+[31mnodered-scrappers     |[0m     at Object.copySync (/usr/src/node-red/node_modules/fs-extra/lib/copy-sync/copy-sync.js:26:10)
+[31mnodered-scrappers     |[0m     at Object.<anonymous> (/usr/src/node-red/node_modules/node-red/red.js:125:20)
+[31mnodered-scrappers     |[0m     at Module._compile (internal/modules/cjs/loader.js:1085:14)
+[31mnodered-scrappers     |[0m     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+[31mnodered-scrappers     |[0m     at Module.load (internal/modules/cjs/loader.js:950:32) {
+[31mnodered-scrappers     |[0m   errno: -13,
+[31mnodered-scrappers     |[0m   syscall: 'copyfile',
+[31mnodered-scrappers     |[0m   code: 'EACCES',
+[31mnodered-scrappers     |[0m   path: '/usr/src/node-red/node_modules/node-red/settings.js',
+[31mnodered-scrappers     |[0m   dest: '/data/settings.js'
+[31mnodered-scrappers     |[0m }
+[31mnodered-scrappers     |[0m npm ERR! code ELIFECYCLE
+[31mnodered-scrappers     |[0m npm ERR! errno 1
+[31mnodered-scrappers     |[0m npm ERR! node-red-docker@2.0.5 start: `node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS "--userDir" "/data"`
+[31mnodered-scrappers     |[0m npm ERR! Exit status 1
+[31mnodered-scrappers     |[0m npm ERR! 
+[31mnodered-scrappers     |[0m npm ERR! Failed at the node-red-docker@2.0.5 start script.
+[31mnodered-scrappers     |[0m npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+[34mnodered               |[0m 
+[34mnodered               |[0m > node-red-docker@2.0.5 start /usr/src/node-red
+[34mnodered               |[0m > node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS "--userDir" "/data"
+[34mnodered               |[0m 
+[36;1mwebserver             |[0m /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+[36;1mwebserver             |[0m /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+[36;1mwebserver             |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+[36;1mwebserver             |[0m 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf is not a file or does not exist
+[36;1mwebserver             |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+[36;1mwebserver             |[0m /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+[36;1mwebserver             |[0m /docker-entrypoint.sh: Configuration complete; ready for start up
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: using the "epoll" event method
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: nginx/1.21.1
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: OS: Linux 5.4.72-microsoft-standard-WSL2
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: start worker processes
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: start worker process 22
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: start worker process 23
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: start worker process 24
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: start worker process 25
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: start worker process 26
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: start worker process 27
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: start worker process 28
+[36;1mwebserver             |[0m 2021/10/11 10:46:46 [notice] 1#1: start worker process 29
+[31mnodered-scrappers exited with code 1
+[0m[34mnodered               |[0m 11 Oct 12:46:46 - [info] 
+[34mnodered               |[0m 
+[34mnodered               |[0m Welcome to Node-RED
+[34mnodered               |[0m ===================
+[34mnodered               |[0m 
+[34mnodered               |[0m 11 Oct 12:46:46 - [info] Node-RED version: v2.0.5
+[34mnodered               |[0m 11 Oct 12:46:46 - [info] Node.js  version: v14.17.3
+[34mnodered               |[0m 11 Oct 12:46:46 - [info] Linux 5.4.72-microsoft-standard-WSL2 x64 LE
+[32mapp                   |[0m Starting Metro Bundler
+[34mnodered               |[0m 11 Oct 12:46:47 - [info] Loading palette nodes
+[34mnodered               |[0m 11 Oct 12:46:48 - [info] Settings file  : /data/settings.js
+[34mnodered               |[0m 11 Oct 12:46:48 - [info] Context store  : 'default' [module=memory]
+[34mnodered               |[0m 11 Oct 12:46:48 - [info] User directory : /data
+[34mnodered               |[0m 11 Oct 12:46:48 - [warn] Projects disabled : editorTheme.projects.enabled=false
+[34mnodered               |[0m 11 Oct 12:46:48 - [info] Flows file     : /data/flows.json
+[34mnodered               |[0m 11 Oct 12:46:48 - [info] Server now running at http://127.0.0.1:1880/
+[34mnodered               |[0m 11 Oct 12:46:48 - [warn] 
+[34mnodered               |[0m 
+[34mnodered               |[0m ---------------------------------------------------------------------
+[34mnodered               |[0m Your flow credentials file is encrypted using a system-generated key.
+[34mnodered               |[0m 
+[34mnodered               |[0m If the system-generated key is lost for any reason, your credentials
+[34mnodered               |[0m file will not be recoverable, you will have to delete it and re-enter
+[34mnodered               |[0m your credentials.
+[34mnodered               |[0m 
+[34mnodered               |[0m You should set your own key using the 'credentialSecret' option in
+[34mnodered               |[0m your settings file. Node-RED will then re-encrypt your credentials
+[34mnodered               |[0m file using your chosen key the next time you deploy a change.
+[34mnodered               |[0m ---------------------------------------------------------------------
+[34mnodered               |[0m 
+[34mnodered               |[0m 11 Oct 12:46:48 - [info] Starting flows
+[34mnodered               |[0m MongoDB URL: mongodb://db:27017/db?connectTimeoutMS=300000
+[34mnodered               |[0m connecting:  mongodb://db:27017/db?connectTimeoutMS=300000
+[34mnodered               |[0m MongoDB URL: mongodb://db:27017/db
+[34mnodered               |[0m 11 Oct 12:46:49 - [info] Started flows
+[34mnodered               |[0m (node:18) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[34mnodered               |[0m (Use `node --trace-warnings ...` to show where the warning was created)
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:49.134+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.7:50620","uuid":"19b01762-a7f4-4b1a-8274-137b4123ebd4","connectionId":2,"connectionCount":2}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:49.135+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.7:50622","uuid":"e25c529b-3003-49f5-8edf-1dec12178de9","connectionId":3,"connectionCount":3}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:49.142+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn2","msg":"client metadata","attr":{"remote":"172.20.0.7:50620","client":"conn2","doc":{"driver":{"name":"nodejs","version":"3.6.9"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.4.72-microsoft-standard-WSL2"},"platform":"'Node.js v14.17.3, LE (legacy)"}}}
+[33mdb_1                  |[0m {"t":{"$date":"2021-10-11T10:46:49.143+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn3","msg":"client metadata","attr":{"remote":"172.20.0.7:50622","client":"conn3","doc":{"driver":{"name":"nodejs","version":"3.6.9"},"os":{"type":"Linux","name":"linux","architecture":"x64","version":"5.4.72-microsoft-standard-WSL2"},"platform":"'Node.js v14.17.3, LE (legacy)"}}}
+[32mapp                   |[0m Starting Webpack on port 19006 in [4mdevelopment[24m mode.
+[32mapp                   |[0m 
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m compiling (0%)  
+[32mapp                   |[0m  
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (10%) [90m2/3 modules[39m [90m1 active[39m
+[32mapp                   |[0m  [90m...l/lib/node_modules/expo-cli/node_modules/react-dev-utils/webpackHotDevClie[39m
+[32mapp                   |[0m [90mnt.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (10%) [90m2/4 modules[39m [90m2 active[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m node_modules/expo/AppEntry.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (10%) [90m3/5 modules[39m [90m2 active[39m
+[32mapp                   |[0m  [90m...de/.npm-global/lib/node_modules/expo-cli/node_modules/webpack/hot/dev-serv[39m
+[32mapp                   |[0m [90mer.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (10%) [90m5/9 modules[39m [90m4 active[39m
+[32mapp                   |[0m  [90m...lib/node_modules/expo-cli/node_modules/react-dev-utils/formatWebpackMessag[39m
+[32mapp                   |[0m [90mes.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (10%) [90m6/12 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90m.../node/.npm-global/lib/node_modules/expo-cli/node_modules/webpack/hot/emitt[39m
+[32mapp                   |[0m [90mer.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (11%) [90m11/13 modules[39m [90m2 active[39m
+[32mapp                   |[0m  [90m...abel-loader [34m›[90m node_modules/expo/build/launch/registerRootComponent.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (11%) [90m12/16 modules[39m [90m4 active[39m
+[32mapp                   |[0m  [90m...39m ../home/node/.npm-global/lib/node_modules/expo-cli/node_modules/url/ut[39m
+[32mapp                   |[0m [90mil.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (11%) [90m14/20 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m src/core/theme.tsx[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (11%) [90m15/21 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90m...de/.npm-global/lib/node_modules/expo-cli/node_modules/webpack/buildin/modu[39m
+[32mapp                   |[0m [90mle.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (12%) [90m17/23 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m node_modules/expo/build/launch/withExpoRoot.web.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m18/24 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90m...ome/node/.npm-global/lib/node_modules/expo-cli/node_modules/strip-ansi/ind[39m
+[32mapp                   |[0m [90mex.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m19/24 modules[39m [90m5 active[39m
+[32mapp                   |[0m  [90m...ome/node/.npm-global/lib/node_modules/expo-cli/node_modules/strip-ansi/ind[39m
+[32mapp                   |[0m [90mex.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m20/26 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90mnode_modules/react/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m20/27 modules[39m [90m7 active[39m
+[32mapp                   |[0m  [90m....js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m21/27 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90m....js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m23/29 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90m...de/.npm-global/lib/node_modules/expo-cli/node_modules/querystring-es3/enco[39m
+[32mapp                   |[0m [90mde.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m24/30 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90m...home/node/.npm-global/lib/node_modules/expo-cli/node_modules/process/brows[39m
+[32mapp                   |[0m [90mer.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m25/32 modules[39m [90m7 active[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m src/core/Settings.ts[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m26/34 modules[39m [90m8 active[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m src/context/appStore.ts[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m26/35 modules[39m [90m9 active[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m src/components/DrawerContent.tsx[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m27/36 modules[39m [90m9 active[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m src/components/StackNavigator.tsx[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m28/36 modules[39m [90m8 active[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m src/components/StackNavigator.tsx[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m30/40 modules[39m [90m10 activ[39m
+[32mapp                   |[0m [90me[39m
+[32mapp                   |[0m  [90murl-loader [34m›[90m src/assets/fonts/Archivo-Regular.ttf[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m31/40 modules[39m [90m9 active[39m
+[32mapp                   |[0m  [90murl-loader [34m›[90m src/assets/fonts/Archivo-Regular.ttf[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m32/40 modules[39m [90m8 active[39m
+[32mapp                   |[0m  [90murl-loader [34m›[90m src/assets/fonts/Archivo-Regular.ttf[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m33/40 modules[39m [90m7 active[39m
+[32mapp                   |[0m  [90murl-loader [34m›[90m src/assets/fonts/Archivo-Regular.ttf[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m38/43 modules[39m [90m5 active[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/defineProperty.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m39/43 modules[39m [90m4 active[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/defineProperty.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m40/44 modules[39m [90m4 active[39m
+[32mapp                   |[0m  [90m...lib/node_modules/expo-cli/node_modules/@babel/runtime/helpers/arrayWithHol[39m
+[32mapp                   |[0m [90mes.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m41/47 modules[39m [90m6 active[39m
+[32mapp                   |[0m  [90m...ib/node_modules/expo-cli/node_modules/@babel/runtime/helpers/nonIterableRe[39m
+[32mapp                   |[0m [90mst.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m43/61 modules[39m [90m18 activ[39m
+[32mapp                   |[0m [90me[39m
+[32mapp                   |[0m  [90m...der [34m›[90m node_modules/react-native-web/dist/exports/AppRegistry/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m43/105 modules[39m [90m62 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90m...abel-loader [34m›[90m node_modules/expo-error-recovery/build/ErrorRecovery.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m53/111 modules[39m [90m58 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90mnode_modules/prop-types/checkPropTypes.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m60/114 modules[39m [90m54 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/assertThisInitialized.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m61/114 modules[39m [90m53 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/assertThisInitialized.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m69/114 modules[39m [90m45 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/assertThisInitialized.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m75/114 modules[39m [90m39 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/assertThisInitialized.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m83/114 modules[39m [90m31 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/assertThisInitialized.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m93/114 modules[39m [90m21 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/assertThisInitialized.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m101/114 modules[39m [90m13 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/assertThisInitialized.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m106/114 modules[39m [90m8 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/assertThisInitialized.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m114/117 modules[39m [90m3 acti[39m
+[32mapp                   |[0m [90mve[39m
+[32mapp                   |[0m  [90mnode_modules/immer/dist/immer.esm.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m115/142 modules[39m [90m27 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/object-assign/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m118/156 modules[39m [90m38 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...[39m node_modules/react-native-paper/lib/module/components/Drawer/DrawerIt[39m
+[32mapp                   |[0m [90mem.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m120/166 modules[39m [90m46 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m src/pages/Home.tsx[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m128/170 modules[39m [90m42 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...l-loader [34m›[90m node_modules/expo-error-recovery/build/ErrorRecovery.fx.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m137/174 modules[39m [90m37 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/url-parse/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m145/178 modules[39m [90m33 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m156/180 modules[39m [90m24 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...abel-loader [34m›[90m node_modules/@react-navigation/core/lib/module/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m163/181 modules[39m [90m18 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/@callstack/react-theme-provider/lib/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m170/182 modules[39m [90m12 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...4m›[90m node_modules/react-native-web/dist/exports/Text/TextAncestorContext.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m175/190 modules[39m [90m15 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...39m node_modules/react-native-paper/lib/module/components/Dialog/DialogTit[39m
+[32mapp                   |[0m [90mle.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m179/209 modules[39m [90m30 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...9m node_modules/react-native-web/dist/exports/TouchableWithoutFeedback/ind[39m
+[32mapp                   |[0m [90mex.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m181/215 modules[39m [90m34 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/color/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m185/220 modules[39m [90m35 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m src/core/ApiCaller.ts[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m189/223 modules[39m [90m34 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...[34m›[90m node_modules/@react-navigation/drawer/lib/module/views/DrawerView.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m196/226 modules[39m [90m30 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...e_modules/react-native-paper/lib/module/components/TextInput/Adornment/enu[39m
+[32mapp                   |[0m [90mms.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m202/232 modules[39m [90m30 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/@babel/runtime/helpers/iterableToArray.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m204/233 modules[39m [90m29 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/qs/lib/parse.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m209/233 modules[39m [90m24 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/qs/lib/parse.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m214/234 modules[39m [90m20 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mnode_modules/@callstack/react-theme-provider/lib/createTheming.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m219/243 modules[39m [90m24 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...l-loader [34m›[90m node_modules/react-native-web/dist/exports/Easing/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m227/248 modules[39m [90m21 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...abel-loader [34m›[90m node_modules/@react-navigation/core/lib/module/types.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m234/257 modules[39m [90m23 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...er [34m›[90m node_modules/@react-navigation/core/lib/module/useFocusEffect.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m237/277 modules[39m [90m40 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...l-loader [34m›[90m node_modules/react-native-web/dist/exports/render/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m249/283 modules[39m [90m34 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...ode_modules/react-native-paper/lib/module/components/RadioButton/RadioButt[39m
+[32mapp                   |[0m [90mon.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (40%) [90m256/284 modules[39m [90m28 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...[39m node_modules/react-native-paper/lib/module/components/RadioButton/uti[39m
+[32mapp                   |[0m [90mls.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (41%) [90m262/303 modules[39m [90m41 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90mbabel-loader [34m›[90m node_modules/@expo/vector-icons/build/Feather.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (42%) [90m273/306 modules[39m [90m33 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...r [34m›[90m node_modules/react-native-web/dist/exports/NativeModules/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (43%) [90m278/307 modules[39m [90m29 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...el-loader [34m›[90m node_modules/@expo/vector-icons/MaterialCommunityIcons.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (43%) [90m283/312 modules[39m [90m29 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...34m›[90m node_modules/react-native-web/dist/exports/StyleSheet/flattenStyle.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (44%) [90m288/320 modules[39m [90m32 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...po/vector-icons/build/vendor/react-native-vector-icons/glyphmaps/AntDesign[39m
+[32mapp                   |[0m [90m.json[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (46%) [90m303/329 modules[39m [90m26 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...m›[90m node_modules/react-native-web/dist/exports/ScrollView/ScrollViewBase.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (47%) [90m310/342 modules[39m [90m32 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...el-loader [34m›[90m node_modules/react-native-web/dist/exports/Image/index.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (48%) [90m317/355 modules[39m [90m38 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...r [34m›[90m node_modules/@react-navigation/core/lib/module/useEventEmitter.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (49%) [90m328/363 modules[39m [90m35 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...ode_modules/react-native-paper/lib/module/components/Typography/AnimatedTe[39m
+[32mapp                   |[0m [90mxt.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (50%) [90m336/365 modules[39m [90m29 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...[34m›[90m node_modules/@react-navigation/core/lib/module/useScheduleUpdate.js[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+[32mapp                   |[0m [2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+[32mapp                   |[0m [32m●[39m [32mExpo Webpack[39m [32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[32m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m[37m█[39m building (50%) [90m340/372 modules[39m [90m32 act[39m
+[32mapp                   |[0m [90mive[39m
+[32mapp                   |[0m  [90m...tor-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Regula[39m
+[32mapp                   |[0m [90mr.ttf[39m
+[32mapp                   |[0m 
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Project is running at http://0.0.0.0:19006/
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/node/.npm-global/lib/node_modules/expo-cli/node_modules/@expo/webpack-config/web-default
+[32mapp                   |[0m [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Gracefully stopping... (press Ctrl+C again to force)

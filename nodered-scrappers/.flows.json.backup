@@ -1,0 +1,349 @@
+[
+    {
+        "id": "7b0c186f8d6b0608",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "91edf965b29ad9e0",
+        "type": "inject",
+        "z": "7b0c186f8d6b0608",
+        "name": "start",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "a2fb81d0b900c1e4"
+            ]
+        ]
+    },
+    {
+        "id": "6d76453be5c4705d",
+        "type": "change",
+        "z": "7b0c186f8d6b0608",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "https://bloggedin.co.uk/articles/",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "ff2caead43a065cb"
+            ]
+        ]
+    },
+    {
+        "id": "10f404cf160d1a43",
+        "type": "change",
+        "z": "7b0c186f8d6b0608",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "photo",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "32424b595668d77b"
+            ]
+        ]
+    },
+    {
+        "id": "cedbfa5b7a1fa43b",
+        "type": "function",
+        "z": "7b0c186f8d6b0608",
+        "name": "Build Info Model",
+        "func": "msg.payload = {\n    photo: msg.photo,\n    description: msg.description,\n    title: msg.title\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "683b637c4de66419"
+            ]
+        ]
+    },
+    {
+        "id": "683b637c4de66419",
+        "type": "debug",
+        "z": "7b0c186f8d6b0608",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d2f19b23b11cf7cd",
+        "type": "change",
+        "z": "7b0c186f8d6b0608",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "description",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 340,
+        "wires": [
+            [
+                "84d193d73a66f44e"
+            ]
+        ]
+    },
+    {
+        "id": "5b02c1f18b0cd8b6",
+        "type": "change",
+        "z": "7b0c186f8d6b0608",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "title",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 400,
+        "wires": [
+            [
+                "4db647b8e3449175"
+            ]
+        ]
+    },
+    {
+        "id": "4db647b8e3449175",
+        "type": "delete-session",
+        "z": "7b0c186f8d6b0608",
+        "name": "",
+        "x": 400,
+        "y": 460,
+        "wires": [
+            [
+                "cedbfa5b7a1fa43b"
+            ]
+        ]
+    },
+    {
+        "id": "f1e027297aaa43d1",
+        "type": "element-action",
+        "z": "7b0c186f8d6b0608",
+        "name": "site photo",
+        "locateUsing": "css selector",
+        "locateValue": ".post-image>a>img",
+        "action": "getAttribute",
+        "sendKeys": "payload",
+        "object": "str",
+        "attribute": "src",
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "10f404cf160d1a43"
+            ]
+        ]
+    },
+    {
+        "id": "32424b595668d77b",
+        "type": "element-action",
+        "z": "7b0c186f8d6b0608",
+        "name": "site description",
+        "locateUsing": "css selector",
+        "locateValue": ".entry-summary>p",
+        "action": "getText",
+        "sendKeys": "payload",
+        "object": "str",
+        "attribute": "src",
+        "x": 400,
+        "y": 340,
+        "wires": [
+            [
+                "d2f19b23b11cf7cd"
+            ]
+        ]
+    },
+    {
+        "id": "84d193d73a66f44e",
+        "type": "element-action",
+        "z": "7b0c186f8d6b0608",
+        "name": "site title",
+        "locateUsing": "css selector",
+        "locateValue": ".entry-title>a",
+        "action": "getText",
+        "sendKeys": "payload",
+        "object": "str",
+        "attribute": "src",
+        "x": 380,
+        "y": 400,
+        "wires": [
+            [
+                "5b02c1f18b0cd8b6"
+            ]
+        ]
+    },
+    {
+        "id": "a2fb81d0b900c1e4",
+        "type": "new-session",
+        "z": "7b0c186f8d6b0608",
+        "name": "",
+        "webdriverUri": "http://browserless:3000/webdriver",
+        "webdriverProvider": "local",
+        "webdriverBrowser": "chromium",
+        "logLevel": "error",
+        "killSession": false,
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "6d76453be5c4705d"
+            ]
+        ]
+    },
+    {
+        "id": "ff2caead43a065cb",
+        "type": "browser-action",
+        "z": "7b0c186f8d6b0608",
+        "name": "Open Page",
+        "action": "navigateTo",
+        "url": "",
+        "width": "",
+        "height": "",
+        "keysArr": "",
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "f1e027297aaa43d1",
+                "45a4684b5b92f1e6"
+            ]
+        ]
+    },
+    {
+        "id": "45a4684b5b92f1e6",
+        "type": "actionflows",
+        "z": "7b0c186f8d6b0608",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "msg",
+        "name": "screenshoot_1",
+        "prop": "loop",
+        "untilprop": 0,
+        "until": "gt",
+        "loop": "none",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 940,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ca49d709aeb3536",
+        "type": "actionflows_in",
+        "z": "7b0c186f8d6b0608",
+        "name": "screenshoot_1",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 940,
+        "y": 100,
+        "wires": [
+            [
+                "6b6d6f008bb53a5d"
+            ]
+        ]
+    },
+    {
+        "id": "17c3cadf173f2cfb",
+        "type": "image",
+        "z": "7b0c186f8d6b0608",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 1320,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6b6d6f008bb53a5d",
+        "type": "browser-action",
+        "z": "7b0c186f8d6b0608",
+        "name": "Screenshot",
+        "action": "takeScreenShot",
+        "url": "",
+        "width": "",
+        "height": "",
+        "keysArr": "",
+        "x": 1130,
+        "y": 100,
+        "wires": [
+            [
+                "17c3cadf173f2cfb"
+            ]
+        ]
+    }
+]

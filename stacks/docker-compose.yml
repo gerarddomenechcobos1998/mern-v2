@@ -51,6 +51,24 @@ services:
     volumes:
       - '../nodered:/data'
 
+  node-red-scrappers:
+    image: nodered/node-red
+    container_name: nodered-scrappers
+    environment:
+      - TZ=Europe/Madrid
+    ports:
+      - '1881:1880'
+    depends_on: 
+      - db
+    volumes:
+      - '../nodered-scrappers:/data'
+
+  browserless:
+    image: browserless/chrome
+    container_name: browserless
+    ports:
+      - '3000:3000'
+
   webserver:
     container_name: "webserver"
     image: nginx:latest
@@ -58,6 +76,7 @@ services:
       - mongo-express
       - app
       - node-red
+      - node-red-scrappers
       - db
     ports:
       - '80:80'
